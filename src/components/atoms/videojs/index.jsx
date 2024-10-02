@@ -5,7 +5,33 @@ import 'video.js/dist/video-js.css';
 export const VideoJS = (props) => {
     const videoRef = React.useRef(null);
     const playerRef = React.useRef(null);
-    const { options, onReady } = props;
+    const { src, autoplay=true, controls=false, loop=true, muted=true } = props;
+
+    const videoOptions = {
+        autoplay: autoplay,
+        controls: controls,
+        loop: loop,
+        muted: muted,
+        fluid: true,
+        preload: 'auto',
+        sources: [{
+            src: src,
+            type: 'application/x-mpegURL'
+        }],
+    };
+
+    const handlePlayerReady = (player) => {
+        playerRef.current = player;
+
+        // You can handle player events here, for example:
+        player.on('waiting', () => {
+            videojs.log('player is waiting');
+        });
+
+        player.on('dispose', () => {
+            videojs.log('player will dispose');
+        });
+    };
 
     React.useEffect(() => {
 
