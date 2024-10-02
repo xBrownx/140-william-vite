@@ -40,22 +40,22 @@ function App() {
         <>
             {navBarVisible && <Header pageRefs={pageRefs} scrollTo={scrollTo} />  }
             <Landing pageRef={pageRefs.landing} scrollTo={() => scrollTo(pageRefs.home)} />
-            {/*<Home pageRef={pageRefs.home} onDiscoverClick={() => scrollTo(pageRefs.availability)}/>*/}
-            {/*<Hero src={CONST.heroOne} />*/}
-            {/*<Lifestyle />*/}
-            {/*<Location pageRef={pageRefs.location}/>*/}
-            {/*<Hero $bgSecondary src={CONST.heroTwo} />*/}
-            {/*<Design pageRef={pageRefs.design} />*/}
-            {/*<Amenities pageRef={pageRefs.amenities} />*/}
-            {/*<Availability pageRef={pageRefs.availability} setNavVis={setNavBarVisible} />*/}
-            {/*<ScrollingText />*/}
-            {/*<History pageRef={pageRefs.history}/>*/}
-            {/*<Gallery />*/}
-            {/*<Hero $bgSecondary src={CONST.heroThree} />*/}
-            {/*<Agency pageRef={pageRefs.agency} />*/}
-            {/*<Hero $bgSecondary src={CONST.heroThree} />*/}
-            {/*<Enquire pageRef={pageRefs.enquire} scrollToTop={() => scrollTo(pageRefs.landing)}/>*/}
-            {/*<Footer />*/}
+            <Home pageRef={pageRefs.home} onDiscoverClick={() => scrollTo(pageRefs.availability)}/>
+            <Hero src={CONST.heroOne} />
+            <Lifestyle />
+            <Location pageRef={pageRefs.location}/>
+            <Hero $bgSecondary src={CONST.heroTwo} />
+            <Design pageRef={pageRefs.design} />
+            <Amenities pageRef={pageRefs.amenities} />
+            <Availability pageRef={pageRefs.availability} setNavVis={setNavBarVisible} />
+            <ScrollingText />
+            <History pageRef={pageRefs.history}/>
+            <Gallery />
+            <Hero $bgSecondary src={CONST.heroThree} />
+            <Agency pageRef={pageRefs.agency} />
+            <Hero $bgSecondary src={CONST.heroThree} />
+            <Enquire pageRef={pageRefs.enquire} scrollToTop={() => scrollTo(pageRefs.landing)}/>
+            <Footer />
         </>
     )
 }
