@@ -1,21 +1,22 @@
 import React, { useRef } from "react";
 import { landing as CONST } from './constants';
-import { ArrowButton } from '../../atoms';
+import { ArrowButton, VideoJS } from '../../atoms';
 import { BackgroundVideo } from "../../molecules";
 import { Page } from "../../templates";
 import { ArrowContainer, PageContainer } from "./styles.jsx";
-import VideoJS from "../../molecules/backgroundVideo/videoJS.jsx";
 
-const DIST_NAME = "https://d3tbbjv3fiiqdd.cloudfront.net/videos/hls/backgroundoutput.m3u8"
+const DIST_NAME = "https://d3tbbjv3fiiqdd.cloudfront.net/videos/hls/landing-3sec-500kb.m3u8"
 function Landing({ pageRef, scrollTo }) {
 
     const playerRef = useRef(null);
 
-    const videoJsOptions = {
+    const videoOptions = {
         autoplay: true,
         controls: false,
+        loop: true,
         muted: true,
         fluid: true,
+        preload: 'auto',
         sources: [{
             src: DIST_NAME,
             type: 'application/x-mpegURL'
@@ -41,7 +42,10 @@ function Landing({ pageRef, scrollTo }) {
             $fullscreen
         >
             <div>
-                <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+                <VideoJS
+                    options={videoOptions}
+                    onReady={handlePlayerReady}
+                />
             </div>
         </Page>
     )

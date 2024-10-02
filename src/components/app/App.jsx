@@ -14,10 +14,13 @@ import Gallery from "../pages/gallery/index.jsx";
 import Agency from "../pages/agency/index.jsx";
 import Enquire from "../pages/enquire/index.jsx";
 import Availability from "../pages/availabality";
+import { MotionGlobalConfig } from "framer-motion"
 
 function App() {
     const [navBarVisible, setNavBarVisible] = useState(true);
 
+
+    MotionGlobalConfig.skipAnimations = true
     const pageRefs = {
         landing: useRef(),
         home: useRef(),

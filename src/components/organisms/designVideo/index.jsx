@@ -9,7 +9,7 @@ import {
     StyledVideo,
     VideoContainer
 } from "./styles";
-import { Row } from "../../atoms";
+import { Row, VideoJS, Image } from "../../atoms";
 import Arrow from '../../../assets/Up-Arrow.svg'
 import { useMobile } from "../../../hooks/index.jsx";
 
@@ -30,6 +30,21 @@ function DesignVideo(props) {
     });
 
     menuArray = [mobileTour, ...menuArray];
+
+    const playerRef = useRef(null);
+
+    const videoOptions = {
+        autoplay: true,
+        controls: true,
+        loop: true,
+        muted: true,
+        fluid: true,
+        preload: 'auto',
+        sources: [{
+            src: isMobile ? menuArray[mobileIdx].videoSrc : currentShot.videoSrc,
+            type: 'application/x-mpegURL'
+        }],
+    };
 
     useEffect(() => {
         setTimeout(() => {
@@ -57,6 +72,19 @@ function DesignVideo(props) {
         }
     }
 
+    const handlePlayerReady = (player) => {
+        playerRef.current = player;
+
+        // You can handle player events here, for example:
+        player.on('waiting', () => {
+            videojs.log('player is waiting');
+        });
+
+        player.on('dispose', () => {
+            videojs.log('player will dispose');
+        });
+    };
+
     return (
         <Container >
             <VideoContainer
@@ -66,17 +94,11 @@ function DesignVideo(props) {
                     {currentShot.mapSrc !== undefined && <Image src={currentShot.mapSrc} />}
                 </MapWrapper >
                 }
-                <StyledVideo
-                    ref={videoRef}
-                    muted
-                    src={isMobile ? menuArray[mobileIdx].videoSrc : currentShot.videoSrc}
-                    autoPlay
-                    controls={true}
-                    onLoad={() => {
-                        videoRef.current.play()
-                    }}
-                >
-                </StyledVideo >
+                <VideoJS
+                    options={videoOptions}
+                    onReady={handlePlayerReady}
+                />
+
 
             </VideoContainer >
             <Overlay style={{justifyContent: "end"}} >

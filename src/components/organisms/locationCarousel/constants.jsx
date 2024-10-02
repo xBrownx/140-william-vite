@@ -2,7 +2,7 @@ export const constants = {
     menuItems: [
         {
             title: 'F&B',
-            imgSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/location/Location-Carousel-1.svg",
+            imgSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/location/fnb.svg",
             iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Location-01-FB.svg",
         },
         {

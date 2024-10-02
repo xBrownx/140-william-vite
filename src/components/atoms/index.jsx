@@ -12,5 +12,6 @@ import Paragraph from './paragraph';
 import Row from './row';
 import Subheading from './subheading';
 import TextArea from './textArea';
+import VideoJS from "./videojs";
 
-export { ArrowButton, Button, Column, Container, Heading, Input, Image, Link, NavArrow, NumberButton,Paragraph, Row, Subheading, TextArea };
+export { ArrowButton, Button, Column, Container, Heading, Input, Image, Link, NavArrow, NumberButton,Paragraph, Row, Subheading, TextArea, VideoJS };

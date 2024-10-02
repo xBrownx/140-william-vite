@@ -1,0 +1,1 @@
+export const storefrontURL = "https://d3tbbjv3fiiqdd.cloudfront.net";
