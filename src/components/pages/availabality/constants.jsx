@@ -205,7 +205,6 @@ export const availability = {
 
                 ]
             },
-
             l20: {
                 vector: {
                     key: "l20-vector",
