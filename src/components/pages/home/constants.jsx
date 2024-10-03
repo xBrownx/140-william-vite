@@ -1,3 +1,5 @@
+import { imageCDN } from "../../../utils/index.jsx";
+
 export const homeConst = {
     headingTxt: "SPACES FOR OUR TENANTS TO THRIVE",
     paragraphTxt: "Presenting a range of fully fitted tenancies available to lease.\n" +
@@ -7,7 +9,7 @@ export const homeConst = {
     assets: {
         hero: {
             key: "home-hero",
-            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/home/hero.jpg",
+            src: imageCDN("home", "home-hero-optimised", "jpg"),
             alt: "Home Hero",
             width: 447,
             height: 666,

@@ -1,8 +1,9 @@
 import React from 'react';
 import { ImgContainer, StyledImg, Wrapper } from "./styles";
+import { assets } from '../../../assets/assetKeys'
 
-function LifestyleImages(props) {
-    const images = props.assets.carousel;
+function LifestyleImages() {
+    const images = assets.lifestyle.img.carousel;
     return (
         <Wrapper >
             {

@@ -4,6 +4,7 @@ import AvailabilityModal from "./availabilityModal";
 import AvailabilityOverlay from "./availabilityOverlay";
 import { AvailabilityRating } from "./availabilityRating/index.jsx";
 import DesignVideo from "./designVideo";
+import MobileDesignVideo from "./designVideo/mobile";
 import EnquireForm from "./enquireForm";
 import Footer from './footer';
 import Header from './header';
@@ -14,4 +15,4 @@ import LocationCarousel from './locationCarousel';
 import ScrollingText from "./scrollingText";
 import ThirdSpace from "./thirdSpace";
 
-export { AmenitiesList, AmenitiesVideo, AvailabilityModal, AvailabilityOverlay, AvailabilityRating, DesignVideo, EnquireForm, Footer, Header, HistoryVideo, LandingTitleAnimation, LifestyleImages, LocationCarousel, ScrollingText, ThirdSpace };
+export { AmenitiesList, AmenitiesVideo, AvailabilityModal, AvailabilityOverlay, AvailabilityRating, DesignVideo, MobileDesignVideo, EnquireForm, Footer, Header, HistoryVideo, LandingTitleAnimation, LifestyleImages, LocationCarousel, ScrollingText, ThirdSpace };

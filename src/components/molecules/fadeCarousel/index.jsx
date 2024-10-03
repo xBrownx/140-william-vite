@@ -1,20 +1,19 @@
 import { CarouselContainer, CarouselSlide, CustomImage, ImgContainer, } from "./styles";
-import { Image } from "../../atoms";
 import React from "react";
 
-function FadeCarousel({activeShot, carouselItems}) {
+function FadeCarousel({activeKey, carouselItems}) {
 
     return (
         <CarouselContainer >
-            {carouselItems.map((item, idx) => (
+            {Object.keys(carouselItems).map((key) => (
                 <CarouselSlide
-                    key={idx}
-                    $isActive={activeShot === idx}
+                    key={key}
+                    $isActive={activeKey === key}
                 >
                     <ImgContainer >
                         <CustomImage
-                            src={item.imgSrc}
-                            alt={""}
+                            src={carouselItems[key].src}
+                            alt={carouselItems[key].alt}
                         />
                     </ImgContainer >
                 </CarouselSlide >

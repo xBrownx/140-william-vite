@@ -1,28 +1,29 @@
+import { assets } from '../../../assets/assetKeys';
+import { constants as CONST } from './constants';
 import { Container, VectorWrapper } from "./styles";
 import { useHoverContext, useModalStatusContext } from "../../organisms/availabilityOverlay/context";
 import { Image } from "../../atoms";
 
 export const LevelVectors = props => {
-    const lvlVectors = props.assets.lvlVectors;
-    const vectors = Object.keys(lvlVectors).map(key => {
-        return {key: key, vector: lvlVectors[key].vector};
-    });
+    const vectors = assets.availability.img["shadow-vectors"];
+    const vectorProps = CONST.shadowVectors;
+
     const [hoverKey, setHoverKey] = useHoverContext();
     const [isModalOpen, onLevelClick] = useModalStatusContext();
 
     return (
         <Container>
-                {vectors.map((item) => {
+                {Object.keys(vectors).map((key) => {
                         return (
                             <VectorWrapper
-                                key={item.key}
-                                $hover={item.key === hoverKey}
-                                $offset={item.vector.positionTop}
-                                onMouseEnter={() => setHoverKey(item.key)}
+                                key={key}
+                                $hover={key === hoverKey}
+                                $offset={vectorProps[key].positionTop}
+                                onMouseEnter={() => setHoverKey(key)}
                                 onMouseLeave={() => setHoverKey(null)}
-                                onClick={() => onLevelClick(item.key)}
+                                onClick={() => onLevelClick(key)}
                             >
-                                <Image src={item.vector.src}/>
+                                <Image src={vectors[key].src}/>
                             </VectorWrapper>
                         );
                     }

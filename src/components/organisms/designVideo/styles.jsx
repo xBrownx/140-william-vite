@@ -4,7 +4,7 @@ import { screen as SCREEN, media as MEDIA } from '../../../utils'
 
 export const Container = styled.div`
     width: 100%;
-    height: 110vh;
+    height: 100%;
     margin: 0;
     background-color: black;
     position: relative;
@@ -32,40 +32,28 @@ export const MapWrapper = styled.div`
 export const VideoContainer = styled.div`
     transition: all 200ms;
     opacity: 1;
-    width: 100vw;
-    
+    width: 1920px;
+    height: 1080px;
     top: 0;
     left: 0;
-    position: absolute !important;
+    position: relative !important;
     z-index: 0;
 
     ${props => props.$isLoading && css`
         opacity: 0;
     `};
     
-    #vjs_video_404654_html5_api {background-color: white}
-    
-    #vjs_video_349445_html5_api {
-        background-color: white
-    }
-
 `
 
-export const StyledVideo = styled.video`
-    box-sizing: border-box;    
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-`
 
 export const Overlay = styled.div`
-    
+    z-index: 10000;
     display: flex;
     flex-direction: column;
+    position: absolute;
     height: 100%;
+    width: 100%;
     justify-content: end;
-
-    box-sizing: border-box;
 `
 
 export const MenuWrapper = styled.div`

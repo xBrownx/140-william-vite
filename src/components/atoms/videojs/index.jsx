@@ -14,7 +14,8 @@ export const VideoJS = (props) => {
         loop: loop,
         muted: muted,
         fluid: true,
-        height: '100vh',
+        height: 1080,
+        enableSmoothSeeking: true,
         sources: [{
             src: src,
             type: 'application/x-mpegURL'
@@ -72,8 +73,10 @@ export const VideoJS = (props) => {
     }, [playerRef]);
 
     return (
-        <div data-vjs-player style={{height: "100%;"}}>
-            <div ref={videoRef} />
+        <div data-vjs-player style={{height: "100%", width: "100%", objectFit: "cover"}}>
+            <div ref={videoRef}>
+                {props.children}
+            </div>
         </div>
     );
 }

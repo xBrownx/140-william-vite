@@ -1,11 +1,13 @@
 import React from 'react';
 import { designConst as CONST } from './constants'
 import { PageTitle } from "../../molecules";
-import { DesignVideo } from "../../organisms";
+import { DesignVideo, MobileDesignVideo } from "../../organisms";
 import { Page } from "../../templates";
 import { CustomContainer } from "./styles.jsx";
+import { useMobile } from "../../../hooks/index.jsx";
 
 function Design({pageRef}) {
+    const isMobile = useMobile();
     return (
         <Page
             $pageRef={pageRef}
@@ -21,10 +23,7 @@ function Design({pageRef}) {
                     {CONST.subheadingTxt}
                     {CONST.headingTxt}
                 </PageTitle >
-                <DesignVideo
-                    tour={CONST.tour}
-                    menuItems={CONST.menuItems}
-                />
+                { isMobile ? <MobileDesignVideo /> : <DesignVideo /> }
             </CustomContainer >
         </Page >
     );

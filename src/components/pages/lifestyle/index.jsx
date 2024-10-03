@@ -26,7 +26,7 @@ function Lifestyle() {
                 </TitleContainer >
                 <CarouselContainer >
                     <ScrollingCarousel >
-                        <LifestyleImages assets={CONST.assets} />
+                        <LifestyleImages />
                     </ScrollingCarousel >
                 </CarouselContainer >
             </StyledColumn >

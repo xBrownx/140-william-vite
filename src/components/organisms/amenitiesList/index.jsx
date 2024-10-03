@@ -1,4 +1,5 @@
 import React from 'react';
+import { assets } from '../../../assets/assetKeys';
 import { constants as CONST } from './constants'
 import { Paragraph } from '../../atoms'
 import { IconLink } from "../../molecules";
@@ -7,14 +8,15 @@ import { StyledLi, StyledUl } from "./styles";
 
 function AmenitiesList() {
     const menuItems = CONST.menuItems;
+    const icons = assets.amenities["icon"]
     return (
         <StyledUl>
-            {menuItems.map((item, idx) => {
+            {Object.keys(menuItems).map((key) => {
                 return (
-                    <StyledLi key={item.key}>
-                        <IconLink $iconSrc={item.iconSrc} $idx={idx}>
+                    <StyledLi key={key}>
+                        <IconLink $iconSrc={icons[key].src}>
                             <Paragraph $secondary $size16>
-                                {item.title}
+                                {menuItems[key].title}
                             </Paragraph>
                         </IconLink>
                     </StyledLi>

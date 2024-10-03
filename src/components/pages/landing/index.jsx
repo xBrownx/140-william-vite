@@ -4,16 +4,18 @@ import { ArrowButton, VideoJS } from '../../atoms';
 import { BackgroundVideo } from "../../molecules";
 import { Page } from "../../templates";
 import { ArrowContainer, PageContainer } from "./styles.jsx";
+import { assets } from '../../../assets/assetKeys';
 
-const DIST_NAME = "https://d3tbbjv3fiiqdd.cloudfront.net/videos/hls/landing-3sec-500kb.m3u8"
 function Landing({ pageRef, scrollTo }) {
+    const bgVideo = assets.landing.vid["background-video"];
+
     return (
         <Page
             $pageRef={pageRef}
             $fullscreen
         >
             <div>
-                <VideoJS src={DIST_NAME} />
+                <VideoJS src={bgVideo.src} />
             </div>
         </Page>
     );

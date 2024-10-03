@@ -1,40 +1,25 @@
-
 export const constants = {
-    menuItems: [
-        {
-            key: "concierge",
+    menuItems: {
+        "concierge": {
             title: 'Hotel style concierge',
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/amenities-concierge.svg",
         },
-        {
-            key: "flexible-space",
+        "flexible-space": {
             title: 'Flexible space suitable for short term use',
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Amenities-Icon-2.svg",
         },
-        {
-            key: "multi-purpose",
+        "multi-purpose": {
             title: 'Bookable multi-purpose space',
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Amenities-Icon-3.svg",
         },
-        {
-            key: "gym",
+        "gym": {
             title: 'Gym and cardio room',
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Amenities-Icon-4.svg",
         },
-        {
-            key: "facilities",
+        "facilities": {
             title: 'Resort style end of trip facilities',
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Amenities-Icon-5.svg",
         },
-        {
-            key: "parking",
+        "parking": {
             title: 'On site car parking',
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Amenities-Icon-6.svg",
         },
-        {
-            key: "cafe",
+        "cafe": {
             title: 'On site cafe',
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Amenities-Icon-7.svg",
         },
-    ]
+    }
 }

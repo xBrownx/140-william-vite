@@ -1,26 +1,42 @@
-import { constants as CONST } from "./constants";
-import { CustomContainer, Wrapper } from "./styles";
 import React, { useState } from "react";
-import { CarouselMenu, FadeCarousel } from "../../molecules";
-
-
+import { assets } from "../../../assets/assetKeys";
+import { constants as CONST } from './constants';
+import { CustomContainer, MenuContainer, MenuWrapper, MenuItem, Wrapper } from "./styles";
+import { Image } from "../../atoms";
+import { FadeCarousel } from "../../molecules";
 
 function LocationCarousel() {
-    const menuItems = CONST.menuItems;
-    const [activeShot, setActiveShot] = useState(0);
+    const images = assets.location.img;
+    const icons = assets.location.icon;
+    const menuItems = CONST.menuItems
+    const [activeKey, setActiveKey] = useState("fnb");
 
     return (
         <Wrapper>
             <CustomContainer>
                 <FadeCarousel
-                    activeShot={activeShot}
-                    carouselItems={menuItems} />
+                    activeKey={activeKey}
+                    carouselItems={images} />
             </CustomContainer>
-            <CarouselMenu
-                menuItems={menuItems}
-                activeShot={activeShot}
-                setActiveShot={setActiveShot}
-            />
+            <MenuContainer>
+                <MenuWrapper>
+                    {Object.keys(menuItems).map((key) => {
+                            return (
+                                <MenuItem
+                                    key={key}
+                                    onClick={() => setActiveKey(key)}
+                                    $isActive={activeKey === key}
+                                >
+                                    <Image src={icons[key].src} />
+                                    <p >
+                                        {menuItems[key].title}
+                                    </p >
+                                </MenuItem >
+                            );
+                        }
+                    )}
+                </MenuWrapper>
+            </MenuContainer>
         </Wrapper>
     );
 }
