@@ -4,43 +4,10 @@ import { screen as SCREEN, media as MEDIA } from '../../../utils'
 
 export const Container = styled.div`
     width: 100%;
-    height: ${SCREEN.height(810)};
-    margin: 2% 0 0 0;
+    height: 110vh;
+    margin: 0;
     background-color: black;
     position: relative;
-    box-sizing: border-box;
-`
-
-export const ListWrapper = styled.div`
-    flex: 1;
-    padding-top: ${SCREEN.height(140)};
-    padding-left: ${SCREEN.width(32)};
-    z-index: 1000;
-`
-
-export const ButtonWrapper = styled.div`
-    opacity: 1;
-    transition: opacity 0.4s;
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-
-    padding-top: ${SCREEN.height(140)};
-    
-    ${props => props.$visible && css`
-        opacity: 0;
-    `}
-    
-    button {
-        z-index: 1000;
-
-        svg {
-            height: ${SCREEN.height(24)};
-            width: ${SCREEN.width(24)};
-        }
-    }
 `
 
 export const MapWrapper = styled.div`
@@ -58,21 +25,29 @@ export const MapWrapper = styled.div`
     img {
         width: ${SCREEN.width(175)};
         height: ${SCREEN.height(219)};
+        object-fit: contain;
     }
 `
 
 export const VideoContainer = styled.div`
-    box-sizing: border-box;
     transition: all 200ms;
     opacity: 1;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    
+    top: 0;
+    left: 0;
     position: absolute !important;
     z-index: 0;
 
     ${props => props.$isLoading && css`
         opacity: 0;
     `};
+    
+    #vjs_video_404654_html5_api {background-color: white}
+    
+    #vjs_video_349445_html5_api {
+        background-color: white
+    }
 
 `
 

@@ -10,11 +10,13 @@ function Design({pageRef}) {
         <Page
             $pageRef={pageRef}
             $bgSecondary
+            $fitContent
+            style={{overflow: "unset", boxSizing: "unset", height: "unset"}}
         >
             <CustomContainer >
                 <PageTitle
                     $secondary
-                    $paddingInline={{inline: 160}}
+                    $paddingInline={160}
                 >
                     {CONST.subheadingTxt}
                     {CONST.headingTxt}

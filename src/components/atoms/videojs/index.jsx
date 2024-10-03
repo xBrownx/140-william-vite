@@ -7,13 +7,14 @@ export const VideoJS = (props) => {
     const playerRef = React.useRef(null);
     const { src, autoplay=true, controls=false, loop=true, muted=true } = props;
 
+
     const options = {
         autoplay: autoplay,
         controls: controls,
         loop: loop,
         muted: muted,
         fluid: true,
-        preload: 'auto',
+        height: '100vh',
         sources: [{
             src: src,
             type: 'application/x-mpegURL'
@@ -45,7 +46,7 @@ export const VideoJS = (props) => {
 
             const player = playerRef.current = videojs(videoElement, options, () => {
                 videojs.log('player is ready');
-                onReady && onReady(player);
+                handlePlayerReady && handlePlayerReady(player);
             });
 
             // You could update an existing player in the `else` block here
@@ -71,7 +72,7 @@ export const VideoJS = (props) => {
     }, [playerRef]);
 
     return (
-        <div data-vjs-player>
+        <div data-vjs-player style={{height: "100%;"}}>
             <div ref={videoRef} />
         </div>
     );
