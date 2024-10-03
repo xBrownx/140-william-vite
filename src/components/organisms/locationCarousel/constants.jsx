@@ -1,24 +1,27 @@
+import { imageCDN, iconCDN } from "../../../utils/";
+const subFolder = "location";
+
 export const constants = {
     menuItems: [
         {
             title: 'F&B',
-            imgSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/location/fnb.svg",
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Location-01-FB.svg",
+            imgSrc: imageCDN(subFolder, "fnb", "svg"),
+            iconSrc: iconCDN("Location-01-FB", "svg"),
         },
         {
             title: 'RETAIL',
-            imgSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/location/Location-Carousel-2.svg",
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Location-02-Retail.svg",
+            imgSrc: imageCDN(subFolder, "retail", "svg"),
+            iconSrc: iconCDN("Location-02-Retail", "svg"),
         },
         {
             title: 'TRAINS',
-            imgSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/location/Location-Carousel-3.svg",
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Location-03-Trains.svg",
+            imgSrc: imageCDN(subFolder, "trains", "svg"),
+            iconSrc: iconCDN("Location-03-Trains", "svg"),
         },
         {
             title: 'HOTELS',
-            imgSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/location/Location-Carousel-4.svg",
-            iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Location-04-Hotels.svg",
+            imgSrc: imageCDN(subFolder, "hotels", "svg"),
+            iconSrc: iconCDN("Location-04-Hotels", "svg"),
         },
     ],
 }

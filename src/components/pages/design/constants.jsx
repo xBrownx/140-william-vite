@@ -1,4 +1,4 @@
-import { storefrontURL } from "../../../utils/globals.jsx";
+import { storefrontURL, videoCDN } from "../../../utils/globals.jsx";
 const srcURL = (filename) => storefrontURL + `/videos/hls/${filename}.m3u8`;
 
 export const designConst = {
@@ -7,7 +7,7 @@ export const designConst = {
     tour: {
         key: "tour",
         title: "START TOUR",
-        videoSrc: srcURL("tour"),
+        videoSrc: videoCDN("hls", "tour"),
         iconSrc: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/play.svg"
     },
     menuItems: {

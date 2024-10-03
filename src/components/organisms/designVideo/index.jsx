@@ -31,30 +31,6 @@ function DesignVideo(props) {
 
     menuArray = [mobileTour, ...menuArray];
 
-    const playerRef = useRef(null);
-
-    const videoOptions = {
-        autoplay: true,
-        controls: true,
-        loop: true,
-        muted: true,
-        fluid: true,
-        preload: 'auto',
-        sources: [{
-            src: isMobile ? menuArray[mobileIdx].videoSrc : currentShot.videoSrc,
-            type: 'application/x-mpegURL'
-        }],
-    };
-
-    useEffect(() => {
-        setTimeout(() => {
-            videoRef.current.play();
-        }, 0.5);
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 0.5)
-    }, [currentShot]);
-
 
     const navLeft = () => {
         let idx = mobileIdx
@@ -72,18 +48,6 @@ function DesignVideo(props) {
         }
     }
 
-    const handlePlayerReady = (player) => {
-        playerRef.current = player;
-
-        // You can handle player events here, for example:
-        player.on('waiting', () => {
-            videojs.log('player is waiting');
-        });
-
-        player.on('dispose', () => {
-            videojs.log('player will dispose');
-        });
-    };
 
     return (
         <Container >
@@ -95,8 +59,9 @@ function DesignVideo(props) {
                 </MapWrapper >
                 }
                 <VideoJS
-                    options={videoOptions}
-                    onReady={handlePlayerReady}
+                    src={isMobile ? menuArray[mobileIdx].videoSrc : currentShot.videoSrc}
+                    autoplay={true}
+                    muted={true}
                 />
 
 

@@ -7,7 +7,7 @@ export const VideoJS = (props) => {
     const playerRef = React.useRef(null);
     const { src, autoplay=true, controls=false, loop=true, muted=true } = props;
 
-    const videoOptions = {
+    const options = {
         autoplay: autoplay,
         controls: controls,
         loop: loop,
