@@ -10,6 +10,7 @@ function SlideCarousel({images, rounded}) {
         return (
             <Styled.Container>
                 <Swiper
+                    id={"swiper"}
                     modules={[Navigation, Pagination]}
                     spaceBetween={1}
                     slidesPerView={1}
@@ -19,15 +20,20 @@ function SlideCarousel({images, rounded}) {
                     style={{
                         "--swiper-pagination-color": "#FFF",
                         "--swiper-navigation-color": "#FFF",
+                        height: "100%",
                     }}
                 >
                     {images.map((image, i) => {
                         return (
                             <Styled.Slide
+                                id={"swiper-slide"}
                                 as={SwiperSlide}
                                 key={i}
                             >
-                                <SwiperImg image={image} rounded={rounded} />
+                                <SwiperImg
+                                    image={image}
+                                    rounded={rounded}
+                                />
                             </Styled.Slide>
 
                         );
@@ -42,9 +48,10 @@ const SwiperImg = React.memo(
     function SwiperImg({image, rounded}) {
         return (
             <Styled.SwiperImage
+                id={"swiper-image"}
                 $rounded={rounded}
                 src={image.src}
-                alt={"no image"}
+                alt={image.alt}
             />
         );
     }

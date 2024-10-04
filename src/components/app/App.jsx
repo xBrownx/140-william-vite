@@ -14,12 +14,11 @@ import Gallery from "../pages/gallery/index.jsx";
 import Agency from "../pages/agency/index.jsx";
 import Enquire from "../pages/enquire/index.jsx";
 import Availability from "../pages/availabality";
-import { AnimatePresence, motion } from "framer-motion"
 import LoadingScreen from "../organisms/loadingScreen/index.jsx";
 
 function App() {
     const [navBarVisible, setNavBarVisible] = useState(true);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     const pageRefs = {
         landing: useRef(),

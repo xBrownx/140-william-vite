@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { screen as SCREEN, media as MEDIA } from '../../../utils'
+import { screen as SCREEN, media as MEDIA } from '../../../../utils/index.jsx'
 
 
 export const Container = styled.div`
@@ -19,7 +19,7 @@ export const MapWrapper = styled.div`
     justify-content: end;
     right: 0;
     top: 0;
-    padding-top: ${SCREEN.height(120)};
+    padding-top: 10%;
     padding-right: ${SCREEN.width(32)};
 
     img {
@@ -32,8 +32,8 @@ export const MapWrapper = styled.div`
 export const VideoContainer = styled.div`
     transition: all 200ms;
     opacity: 1;
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: fit-content;
     top: 0;
     left: 0;
     position: relative !important;
@@ -65,6 +65,8 @@ export const MenuWrapper = styled.div`
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
+    position: absolute;
+    bottom: 5vh;
 `
 
 export const StyledUl = styled.ul`

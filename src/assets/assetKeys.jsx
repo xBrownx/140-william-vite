@@ -112,18 +112,23 @@ export const assets = {
         vid: {
             "tour": {
                 src: videoCDN("design/tour", "tour-output"),
+                controls: true,
             },
             "main-entry": {
                 src: videoCDN("design/main-entry", "main-entry-output"),
+                controls: false,
             },
             "reception": {
                 src: videoCDN("design/reception", "reception-output"),
+                controls: false,
             },
             "lift-lobby": {
-                src: videoCDN("design/lift-lobby", "lift-lobby-output"),
+                src: videoCDN("design/lift-lobby", "lift-lobby"),
+                controls: false,
             },
             "lounge-lobby": {
                 src: videoCDN("design/lounge-lobby", "lounge-lobby-output"),
+                controls: false,
             },
             "work-lobby": {
                 src: videoCDN("design/work-lobby", "work-lobby-output"),
@@ -220,7 +225,7 @@ export const assets = {
     availability: {
         img: {
             "background-image": {
-                src: imageCDN("availability", "mobile-background-optimised", "jpg"),
+                src: imageCDN("availability", "availability-background-optimised", "jpg"),
                 alt: "background-image-building-3d-render",
             },
             "shadow-vectors": {
@@ -317,21 +322,50 @@ export const assets = {
                     }
                 ],
             },
-            "third-space": {
-
+            "third-space": [
+                {
+                    src: imageCDN("availability/thirdspace", "carousel-1-optimised", "jpg"),
+                    alt: "third-space-image",
+                },
+                {
+                    src: imageCDN("availability/thirdspace", "carousel-2-optimised", "jpg"),
+                    alt: "third-space-image",
+                },
+                {
+                    src: imageCDN("availability/thirdspace", "carousel-3-optimised", "jpg"),
+                    alt: "third-space-image",
+                },
+                {
+                    src: imageCDN("availability/thirdspace", "carousel-4-optimised", "jpg"),
+                    alt: "third-space-image",
+                },
+            ]
+        },
+        icon: {
+            "rating-one": {
+                src: imageCDN("availability", "Availability-Rating-01", "svg"),
+                alt: "NABERS-energy-rating-4.5-out-of-6"
+            },
+            "rating-two": {
+                src: imageCDN("availability", "Availability-Rating-02", "svg"),
+                alt: "NABERS-water-rating-5.5-out-of-6"
+            },
+            "download": {
+                src: iconCDN("download", "svg"),
+                alt: "download-icon"
             }
         }
     },
     history: {
         img: {
-            "video-placeholder": {
-                src: imageCDN(),
-                alt: ""
+            "video-poster": {
+                src: imageCDN("history", "History-Placeholder", "jpeg"),
+                alt: "history-video-placeholder"
             }
         },
         vid: {
             "hero-video": {
-                src: videoCDN("history", "hero"),
+                src: videoCDN("history/history", "history-output"),
             }
         }
     },
@@ -348,7 +382,7 @@ export const assets = {
     agency: {
         img: {
             "hero": {
-                src: imageCDN("agency", "hero"),
+                src: imageCDN("agency", "hero-optimised", "jpg"),
                 alt: "hero-image",
             }
         },
@@ -375,11 +409,11 @@ export const assets = {
     footer: {
         img: {
             "client-logo": {
-                src: imageCDN(),
-                alt: ""
+                src: imageCDN("footer", "client-logo", "svg"),
+                alt: "client-logo"
             },
             "replika-logo": {
-                src: imageCDN("replika-log", "replika-logo"),
+                src: imageCDN("footer", "replika-logo", "png"),
                 alt: "replika-logo"
             }
         }

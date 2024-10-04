@@ -4,12 +4,11 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 function LoadingScreen(props) {
     const [progress, setProgress] = useState(0);
-    const [finishedLoading, setFinishedLoading] = useState(false);
     const [startTransition, setStartTransition] = useState(false);
 
     const endTransition = () => {
-        setTimeout(() => setStartTransition(true), 2000);
-        setTimeout(() => props.setLoading(false), 3000);
+        setTimeout(() => setStartTransition(true), 1000);
+        setTimeout(() => props.setLoading(false), 1800);
     }
 
     useEffect(() => {
@@ -18,13 +17,13 @@ function LoadingScreen(props) {
             setProgress(prevState => {
                 x = prevState + 25;
                 if(x >= 100) {
-                    clearInterval(interval);
                     endTransition();
+                    clearInterval(interval);
                 }
                 return x;
             });
 
-        }, 1000);
+        }, 800);
         return () => clearInterval(interval);
     })
 

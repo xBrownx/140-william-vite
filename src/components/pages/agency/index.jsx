@@ -12,8 +12,8 @@ import {
     StyledUl,
     SubheadingWrapper
 } from "./styles.jsx";
+import { assets } from "../../../assets/assetKeys.jsx";
 
-const heroImg = CONST.assets.hero;
 const knightFrankAgency = CONST.agencies.knightFrank;
 const colliersAgency = CONST.agencies.colliers;
 const agentAssets = CONST.assets.agents;
@@ -21,7 +21,7 @@ const OpenIcon = CONST.assets.icons.open.src;
 
 
 function Agency({pageRef}) {
-
+    const heroImg = assets.agency.img["hero"];
     return (
         <Page
             $bgSecondary
@@ -33,7 +33,11 @@ function Agency({pageRef}) {
                 $height={815}
             >
                 <ImgWrapper >
-                    <Image src={heroImg.src} width={heroImg.width} height={heroImg.height} />
+                    <Image
+                        src={heroImg.src}
+                        width={544}
+                        height={815}
+                    />
                 </ImgWrapper >
                 <RightHandPane >
                     <StyledHeading >

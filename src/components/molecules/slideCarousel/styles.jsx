@@ -3,7 +3,9 @@ import {SwiperSlide} from "swiper/react";
 
 export const Container = styled.div`
     max-width: 100%;
-    display: flex;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
     overflow: hidden;
     box-sizing: border-box;
     -webkit-touch-callout: none; 
@@ -11,18 +13,18 @@ export const Container = styled.div`
     -moz-user-select: none; 
     -ms-user-select: none; 
     user-select: none;
-
+    position: absolute;
 
 `
 
 export const Slide = styled(SwiperSlide)`
-    display: flex;
     justify-content: center;
     align-items: center;
-    //max-height: 100vh;
     overflow: hidden;
     box-sizing: border-box;
     object-fit: scale-down;
+    max-width: 100%;
+    position:  absolute;
 `
 
 

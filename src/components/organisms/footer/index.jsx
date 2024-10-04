@@ -2,8 +2,11 @@
 import React from "react";
 import { CentreDiv, Container, LeftDiv, RightDiv, StyledText, Wrapper } from "./styles";
 import { Image } from "../../atoms";
+import { assets } from "../../../assets/assetKeys.jsx";
 
 function Footer() {
+    const clientLogo = assets.footer.img["client-logo"];
+    const replikaLogo = assets.footer.img["replika-logo"];
     return (
         <Container >
             <Wrapper >
@@ -13,10 +16,10 @@ function Footer() {
                     </StyledText >
                 </LeftDiv >
                 <CentreDiv >
-                    <Image src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/Footer-Logo.svg"} />
+                    <Image src={clientLogo.src} alt={clientLogo.alt}/>
                 </CentreDiv >
                 <RightDiv >
-                    <Image src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/replika-logo.png"} />
+                    <Image src={replikaLogo.src} alt={replikaLogo.alt} />
                 </RightDiv >
             </Wrapper >
         </Container >

@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from "react";
+import { memo, useState } from "react";
 import {
     CarouselWrapper,
     CustomButton,
@@ -11,12 +11,13 @@ import {
     ValueWrapper,
     VectorWrapper
 } from "./styles";
-import { Button, Column, Image, Link, Paragraph, Row } from "../../atoms";
+import { Column, Image, Link, Paragraph, Row } from "../../atoms";
 import { ModalPane, ModalNav, SlideCarousel } from "../../molecules";
 import { useModalKeyContext, useModalStatusContext } from "../availabilityOverlay/context";
-import { constants as TSCONST } from "../thirdSpace/constants";
+import { constants as TSCONST } from "../thirdSpaceCarousel/constants";
 import { constants as CONST } from "./constants.jsx";
 import { assets } from "../../../assets/assetKeys.jsx";
+import { ThirdSpaceCarousel } from "../index.jsx";
 
 function AvailabilityModal(props) {
     const tenancyDetails = CONST.tenancyDetails;
@@ -200,14 +201,14 @@ const TenancyDeets = (props) => {
     );
 }
 
-const ThirdspaceModal = (props) => {
+const ThirdspaceModal = () => {
     return (
         <Column $paddingTop={64} $borderBox $width={532} $gap={33} >
             <Title >
                 Level 5 - Third Space
             </Title >
-            <CarouselWrapper >
-                <SlideCarousel images={TSCONST.carousel} />
+            <CarouselWrapper id={"caoursel-wrapper"}>
+                <ThirdSpaceCarousel  />
             </CarouselWrapper >
         </Column >
     );

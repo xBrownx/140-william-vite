@@ -13,7 +13,7 @@ import { MobileModalNav } from "./index";
 import { Image, Paragraph } from "../../atoms";
 import { ModalContainer } from "./styles";
 import { availability } from "../../pages/availabality/constants.jsx";
-import { constants as THIRDSPACE } from '../thirdSpace/constants'
+import { constants as THIRDSPACE } from '../thirdSpaceCarousel/constants'
 
 function MobileModal(props) {
     const lvlData = availability.lvlVectors;

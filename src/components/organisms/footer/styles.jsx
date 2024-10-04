@@ -29,6 +29,11 @@ export const CentreDiv = styled.div`
     flex: 1;
     display: flex;
     justify-content: center;
+    width: 33vw;
+    height: 100px;
+    svg {
+        width: 100%;
+    }
 `
 export const RightDiv = styled.div`
     flex: 1;

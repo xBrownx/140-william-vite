@@ -1,24 +1,24 @@
 import React from "react";
+import { constants as CONST } from './constants'
 import { Container } from "./styles";
 import { LevelButtons, LevelVectors } from "../../molecules";
 import AvailabilityModal from "../availabilityModal";
 import { AvailabilityProvider } from "./context";
 
 
-function AvailabilityOverlay(props) {
+function AvailabilityOverlay() {
+        const buttons = CONST.buttons
+
         return (
             <AvailabilityProvider>
                 <Container>
                     <AvailabilityModal
-                        buttons={props.buttons}
-                        assets={props.assets}
+                        buttons={buttons}
                     />
                     <LevelButtons
-                        buttons={props.buttons}
+                        buttons={buttons}
                     />
-                    <LevelVectors
-                        assets={props.assets}
-                    />
+                    <LevelVectors />
                 </Container>
             </AvailabilityProvider>
         );

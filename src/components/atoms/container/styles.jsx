@@ -124,4 +124,8 @@ export const StyledContainer = styled.div`
         display: flex;
         justify-content: end;
     `}
+    
+    .vjs-poster img {
+        object-fit: cover;
+    }
 `

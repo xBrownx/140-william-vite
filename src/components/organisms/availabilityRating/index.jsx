@@ -2,12 +2,13 @@ import { memo } from 'react';
 import { Column, Image, Paragraph } from "../../atoms";
 import { Wrapper } from "./styles";
 import { useMobile } from "../../../hooks/index.jsx";
-
+import { assets } from '../../../assets/assetKeys'
 export const AvailabilityRating = memo(
-    function AvailabilityRating(props) {
+    function AvailabilityRating() {
         const isMobile = useMobile();
-        const ratingOne = props.assets.icons.ratingOne;
-        const ratingTwo = props.assets.icons.ratingTwo;
+
+        const ratingOne = assets.availability.icon["rating-one"];
+        const ratingTwo = assets.availability.icon["rating-one"];
         return (
             <Column $paddingLeft={isMobile ? 16 : 64}>
                 <Wrapper>

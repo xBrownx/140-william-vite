@@ -5,8 +5,7 @@ import 'video.js/dist/video-js.css';
 export const VideoJS = (props) => {
     const videoRef = React.useRef(null);
     const playerRef = React.useRef(null);
-    const { src, autoplay=true, controls=false, loop=true, muted=true } = props;
-
+    const { src, autoplay = true, controls = false, loop = true, muted = true, poster } = props;
 
     const options = {
         autoplay: autoplay,
@@ -17,6 +16,7 @@ export const VideoJS = (props) => {
         height: 1080,
         preload: "auto",
         enableSmoothSeeking: true,
+        poster: poster,
         sources: [{
             src: src,
             type: 'application/x-mpegURL'
@@ -55,10 +55,10 @@ export const VideoJS = (props) => {
             // on prop change, for example:
         } else {
             const player = playerRef.current;
-
             player.autoplay(options.autoplay);
             player.src(options.sources);
         }
+
     }, [options, videoRef]);
 
     // Dispose the Video.js player when the functional component unmounts
@@ -73,9 +73,10 @@ export const VideoJS = (props) => {
         };
     }, [playerRef]);
 
+
     return (
-        <div data-vjs-player style={{height: "100%", width: "100%", objectFit: "cover"}}>
-            <div ref={videoRef}>
+        <div data-vjs-player style={{ height: "100%", width: "100%", objectFit: "fill" }} >
+            <div ref={videoRef} style={{objectFit: "fill"}}>
                 {props.children}
             </div>
         </div>

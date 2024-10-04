@@ -122,12 +122,17 @@ export const CustomButton = styled.button`
 `
 
 export const CarouselWrapper = styled.div`
+    width: ${SCREEN.width(532)} !important;
+    height: ${SCREEN.height(299)};
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    position:  relative;
     
-    img {
-        object-fit: cover;
-        object-position: center center;
-        width: ${SCREEN.width(532)} !important;
-        height: ${SCREEN.height(299)};
-        min-height: ${SCREEN.width(532)} !important;
+    .sc-cJjvBx {
+        width: 100%;
+        height: 100%;
     }
+    
+    
 `

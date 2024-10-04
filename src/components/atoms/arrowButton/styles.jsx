@@ -50,10 +50,12 @@ export const StyledButton = styled.button`
     img {
         width: 100%;
         height: 100%;
-        ${props => props.$rotate && css`
-        transform: rotate(180deg);
-    `}
+       
     }
+    
+     ${props => props.$rotate && css`
+         transform: rotate(180deg);
+     `}
     
 `
 

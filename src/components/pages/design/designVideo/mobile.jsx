@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { constants as CONST } from './constants';
-import { VideoJS } from "../../atoms";
-import Arrow from '../../../assets/Up-Arrow.svg'
+import { constants as CONST } from './constants.jsx';
+import { VideoJS } from "../../../atoms/index.jsx";
+import Arrow from '../../../../assets/Up-Arrow.svg'
 import { ArrowWrapper, Container, CustomHeading, CustomRow, MobileOverlay } from "./styles.jsx";
 
 function MobileDesignVideo(props) {

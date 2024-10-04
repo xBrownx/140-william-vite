@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Column, Container, Input, Row, TextArea } from "../../atoms";
+import { Button, Column, Container, Input, Row, TextArea } from "../../../atoms/index.jsx";
 
 function EnquireForm(props) {
     const fields = props.fields
