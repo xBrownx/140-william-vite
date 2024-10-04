@@ -15,6 +15,7 @@ export const VideoJS = (props) => {
         muted: muted,
         fluid: true,
         height: 1080,
+        preload: "auto",
         enableSmoothSeeking: true,
         sources: [{
             src: src,
@@ -81,4 +82,4 @@ export const VideoJS = (props) => {
     );
 }
 
-export default VideoJS;
+export default React.memo(VideoJS);

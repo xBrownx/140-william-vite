@@ -5,8 +5,9 @@ import { BackgroundVideo } from "../../molecules";
 import { Page } from "../../templates";
 import { ArrowContainer, PageContainer } from "./styles.jsx";
 import { assets } from '../../../assets/assetKeys';
+import { LandingTitleAnimation } from "../../organisms/index.jsx";
 
-function Landing({ pageRef, scrollTo }) {
+function Landing({ pageRef, scrollTo, isLoading }) {
     const bgVideo = assets.landing.vid["background-video"];
 
     return (
@@ -15,7 +16,9 @@ function Landing({ pageRef, scrollTo }) {
             $fullscreen
         >
             <div>
-                <VideoJS src={bgVideo.src} />
+                <VideoJS src={bgVideo.src}>
+                    {!isLoading && <LandingTitleAnimation headings={CONST.heading} /> }
+                </VideoJS>
             </div>
         </Page>
     );

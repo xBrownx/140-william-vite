@@ -14,13 +14,13 @@ import Gallery from "../pages/gallery/index.jsx";
 import Agency from "../pages/agency/index.jsx";
 import Enquire from "../pages/enquire/index.jsx";
 import Availability from "../pages/availabality";
-import { MotionGlobalConfig } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import LoadingScreen from "../organisms/loadingScreen/index.jsx";
 
 function App() {
     const [navBarVisible, setNavBarVisible] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
-
-    MotionGlobalConfig.skipAnimations = true
     const pageRefs = {
         landing: useRef(),
         home: useRef(),
@@ -41,25 +41,30 @@ function App() {
 
     return (
         <>
-            {navBarVisible && <Header pageRefs={pageRefs} scrollTo={scrollTo} />  }
-            <Landing pageRef={pageRefs.landing} scrollTo={() => scrollTo(pageRefs.home)} />
-            <Home pageRef={pageRefs.home} onDiscoverClick={() => scrollTo(pageRefs.availability)}/>
-            <Hero src={CONST.heroOne} />
-            <Lifestyle />
-            <Location pageRef={pageRefs.location}/>
-            <Hero $bgSecondary src={CONST.heroTwo} />
-            <Design pageRef={pageRefs.design} />
-            <Amenities pageRef={pageRefs.amenities} />
-            <Availability pageRef={pageRefs.availability} setNavVis={setNavBarVisible} />
-            <ScrollingText />
-            <History pageRef={pageRefs.history}/>
-            <Gallery />
-            <Hero $bgSecondary src={CONST.heroThree} />
-            <Agency pageRef={pageRefs.agency} />
-            <Hero $bgSecondary src={CONST.heroThree} />
-            <Enquire pageRef={pageRefs.enquire} scrollToTop={() => scrollTo(pageRefs.landing)}/>
-            <Footer />
-        </>
+            {isLoading && <LoadingScreen setLoading={setIsLoading} />}
+            <Landing pageRef={pageRefs.landing} scrollTo={() => scrollTo(pageRefs.home)} isLoading={isLoading} />
+            {!isLoading && true &&
+                <>
+                    {navBarVisible && <Header pageRefs={pageRefs} scrollTo={scrollTo} />}
+                    <Home pageRef={pageRefs.home} onDiscoverClick={() => scrollTo(pageRefs.availability)} />
+                    <Hero src={CONST.heroOne} />
+                    <Lifestyle />
+                    <Location pageRef={pageRefs.location} />
+                    <Hero $bgSecondary src={CONST.heroTwo} />
+                    <Design pageRef={pageRefs.design} />
+                    <Amenities pageRef={pageRefs.amenities} />
+                    <Availability pageRef={pageRefs.availability} setNavVis={setNavBarVisible} />
+                    <ScrollingText />
+                    <History pageRef={pageRefs.history} />
+                    <Gallery />
+                    <Hero $bgSecondary src={CONST.heroThree} />
+                    <Agency pageRef={pageRefs.agency} />
+                    <Hero $bgSecondary src={CONST.heroThree} />
+                    <Enquire pageRef={pageRefs.enquire} scrollToTop={() => scrollTo(pageRefs.landing)} />
+                    <Footer />
+                </>
+            }
+        </ >
     )
 }
 
