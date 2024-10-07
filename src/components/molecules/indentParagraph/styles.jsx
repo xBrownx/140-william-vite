@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components';
-import {screen as SCREEN, media as MEDIA } from '../../../utils';
+import styled, { css } from 'styled-components';
+import { screen as SCREEN, media as MEDIA } from '../../../utils';
 
 export const Wrapper = styled.div`
     border-left: 1px solid #84936E;
@@ -14,11 +14,11 @@ export const Wrapper = styled.div`
         align-items: end;
         justify-content: end;
     `};
-    
-    ${props=> props.$row && css`
+
+    ${props => props.$row && css`
         width: ${SCREEN.width(600)};
     `};
-    
+
 
     ${props => props.$variant && css`
         padding: 0;
