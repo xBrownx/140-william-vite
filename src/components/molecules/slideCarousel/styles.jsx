@@ -24,7 +24,7 @@ export const Slide = styled(SwiperSlide)`
     box-sizing: border-box;
     object-fit: scale-down;
     max-width: 100%;
-    position:  absolute;
+
 `
 
 
