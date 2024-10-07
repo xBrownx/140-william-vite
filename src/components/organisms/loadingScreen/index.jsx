@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef, useState } from 'react';
-import { Container, ProgressBar, StyledP, TextWrapper, Wrapper } from './styles';
-import { AnimatePresence, motion } from 'framer-motion'
+import { Container, ImageWrapper, ProgressBar, StyledHeading, StyledP, TextWrapper, Wrapper } from './styles';
+import logo from '../../../assets/large-logo.png';
 
 function LoadingScreen(props) {
     const [progress, setProgress] = useState(0);
@@ -8,7 +8,7 @@ function LoadingScreen(props) {
 
     const endTransition = () => {
         setTimeout(() => setStartTransition(true), 1000);
-        setTimeout(() => props.setLoading(false), 1800);
+        setTimeout(() => props.setLoading(false), 3500);
     }
 
     useEffect(() => {
@@ -16,7 +16,8 @@ function LoadingScreen(props) {
         const interval = setInterval(() => {
             setProgress(prevState => {
                 x = prevState + 25;
-                if(x >= 100) {
+                if (x >= 100) {
+                    x = 100;
                     endTransition();
                     clearInterval(interval);
                 }
@@ -29,25 +30,32 @@ function LoadingScreen(props) {
 
     return (
 
-        <motion.div
-            // key="loading-screen"
-            // initial={{ y: 0 }}
-            // animate={{ y: 0 }}
-            // exit={{ y: "-100%" }}
-            // transition={{ease: "easeInOut", duration: 10}}
-            style={{ zIndex: 1000, position: "absolute", width: "100vw", height: "100%" }}
+        <div
+            style={{zIndex: 1000, position: "absolute", width: "100vw", height: "100%"}}
         >
-            <Container $startTransition={startTransition}>
+            <Container $startTransition={startTransition} >
                 <Wrapper>
-                    <ProgressBar id="progress-bar" value={progress} max={100} />
-                    <TextWrapper>
-                        <StyledP id="progress-text" />
-                    </TextWrapper>
-                </Wrapper>
+                    <ImageWrapper $startTransition={startTransition}>
+                        <img src={logo} alt={""} />
+                    </ImageWrapper >
+                    <TextWrapper >
+                        <StyledHeading $startTransition={startTransition} >
+                            140 WILLIAM ST
+                        </StyledHeading >
+                    </TextWrapper >
+                </Wrapper >
+                <Wrapper >
+                    <ProgressBar $startTransition={startTransition} id="progress-bar" value={progress} max={100} />
+                    <TextWrapper >
+                        <StyledP id="progress-text" $startTransition={startTransition} >
+                            {progress}%
+                        </StyledP >
+                    </TextWrapper >
+                </Wrapper >
 
 
-            </Container>
-         </motion.div>
+            </Container >
+        </div >
 
     );
 }

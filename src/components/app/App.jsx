@@ -18,7 +18,7 @@ import LoadingScreen from "../organisms/loadingScreen/index.jsx";
 
 function App() {
     const [navBarVisible, setNavBarVisible] = useState(true);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const pageRefs = {
         landing: useRef(),
