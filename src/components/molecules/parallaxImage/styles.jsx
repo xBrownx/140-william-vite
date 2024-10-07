@@ -11,7 +11,7 @@ export const ImgContainer = styled.div`
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     ${MEDIA.md`
         height: fit-content;
         align-items: start;
@@ -24,7 +24,7 @@ export const StyledImg = styled(motion.img)`
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     ${props => props.width && css`
         min-width: ${STYLE.width(props.width)};
     `};

@@ -9,7 +9,7 @@ export const Button = styled.div`
     
     justify-content: center;
     align-items: center;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     padding: 0;
     margin: 0;
     width: ${STYLE.width(64)};

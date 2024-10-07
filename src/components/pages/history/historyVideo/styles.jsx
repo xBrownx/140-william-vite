@@ -11,7 +11,7 @@ export const CustomContainer = styled.div`
     height: ${SCREEN.height(630)}; 
     padding-inline: ${SCREEN.width(160)};
     padding-block: ${SCREEN.height(32)};
-    border-radius: 0.278vw;
+    border-radius: 15px;
     ${MEDIA.md`
         height: 240px;
         padding-inline: 16px;
@@ -19,6 +19,21 @@ export const CustomContainer = styled.div`
         padding-bottom: 0;
         border-radius: 5px;
     `};
+
+    img {
+        border-radius: 15px;
+        background-color: transparent;
+    }
+    
+    video {
+        border-radius: 15px;
+        background-color: transparent;
+    }
+    
+    video-js {
+        border-radius: 15px;
+        background-color: transparent;
+    }
 `
 
 export const ButtonWrapper = styled.div`

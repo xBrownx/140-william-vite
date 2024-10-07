@@ -45,7 +45,7 @@ export const CarouselSlide = styled.div`
 `
 
 export const ImgContainer = styled.div`
-    border-radius: 0.278vw;
+    border-radius: 15px;
     align-items: end;
     box-sizing: border-box;
     height: 100%;
@@ -57,7 +57,7 @@ export const ImgContainer = styled.div`
 
 export const CustomImage = styled.img`
     box-sizing: border-box;
-    border-radius: 0.278vw;
+    //border-radius: 15px;
     width: 100%;
     height: 100%;
     object-fit: cover;

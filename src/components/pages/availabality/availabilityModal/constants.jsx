@@ -1,10 +1,44 @@
 export const constants = {
     tenancyDetails: {
-        "l09": {
-            width: 495,
-            height: 54,
-            positionTop: 100.9,
-        },
+        "l09": [
+            {
+                status: "Available",
+                floorArea: "561.2 m²",
+                timing: "July 2026",
+                fitout: "Existing",
+                leaseType: "Direct",
+                furtherDetails: [
+                    {
+                        label: "10pax Boardroom",
+                        value: "1",
+                    },
+                    {
+                        label: "6pax Meeting Room",
+                        value: "2",
+                    },
+                    {
+                        label: "8pax Meeting Room",
+                        value: "1",
+                    },
+                    {
+                        label: "Offices",
+                        value: "5",
+                    },
+                    {
+                        label: "Quiet Room",
+                        value: "2",
+                    },
+                    {
+                        label: "Workstations",
+                        value: "28",
+                    },
+                    {
+                        label: "Kitchen/Breakout",
+                        value: "1",
+                    },
+                ]
+            }
+        ],
         "l14": [
             {
                 status: "Available",

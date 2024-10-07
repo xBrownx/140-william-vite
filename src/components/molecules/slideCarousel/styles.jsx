@@ -35,6 +35,6 @@ export const SwiperImage = styled.img`
     height: 100%;
     
     ${props => props.$rounded && css`
-        border-radius: 6px;
+        border-radius: 15px;
     `}
 `

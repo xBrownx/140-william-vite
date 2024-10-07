@@ -5,7 +5,7 @@ import { screen as SCREEN, media as MEDIA } from "../../../utils";
 export const StyledButton = styled.button`
     font-size: ${SCREEN.fontSize(18)};
     font-family: 'SuisseIntl-Regular', serif;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -61,7 +61,7 @@ export const StyledButton = styled.button`
 
 export const Wrapper = styled.div`
     z-index: 1;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     margin: 0;
     background: transparent;
     border-width: 1px;

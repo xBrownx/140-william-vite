@@ -69,7 +69,7 @@ export const CustomButton = styled.button`
     box-sizing: border-box;
     font-size: ${SCREEN.fontSize(16)};
     font-family: 'SuisseIntl-Light', serif;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     margin: 0;
     display: flex;
     justify-content: center;

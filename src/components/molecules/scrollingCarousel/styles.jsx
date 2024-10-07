@@ -4,13 +4,17 @@ import styled from "styled-components";
 export const OuterContainer = styled.div`
     overflow: hidden;
     width: 100%;
-        max-width: unset !important;
+    max-width: unset !important;
 `
 
 export const InnerContainer = styled.div`
     display: flex;
     width: max-content;
     max-width: unset !important;
+    height: fit-content;
+    img {
+        height: 100%;
+    }
 `
 
 export const Track = styled.div`
@@ -19,6 +23,7 @@ export const Track = styled.div`
     width: max-content;
     max-width: unset !important;
     gap: 40px;
+
     &[data-animate="true"] {
         ${InnerContainer} {
             animation: slideAnimation 15s linear infinite;

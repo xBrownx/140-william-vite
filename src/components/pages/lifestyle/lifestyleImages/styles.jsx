@@ -17,15 +17,17 @@ export const Wrapper = styled.div`
 
 
 export const ImgContainer = styled.div`
-    height: 100%;
+    height: 90%;
+    padding: 0;
+    margin: 0;
+    width: auto;
     object-fit: cover;
 `
 
 export const StyledImg = styled.img`
     object-fit: cover;
     height: 100%;
-    width: auto;
-    border-radius: 0.278vw;
+    border-radius: 15px;
 
     ${MEDIA.md`
         border-radius: 3px;

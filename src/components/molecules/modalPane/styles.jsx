@@ -21,7 +21,7 @@ export const ModalWindow = styled.div`
     
     display: flex;
     flex-direction: column;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     width: ${STYLE.width(1000)};
     height: ${STYLE.height(562.5)};
     position: fixed;

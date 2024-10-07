@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
     
     background: rgba(0,0,0,0.15);
     padding-top: ${STYLE.height(5)} 0 0 0;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     
     
     ${props => props.$active && css`

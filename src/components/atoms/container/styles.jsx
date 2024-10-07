@@ -113,7 +113,7 @@ export const StyledContainer = styled.div`
         overflow: hidden;
         box-sizing: border-box;
         width: 100%;
-        border-radius: 0.278vw;
+        border-radius: 15px;
     `}
 
     ${props => props.$flexColumn && css`

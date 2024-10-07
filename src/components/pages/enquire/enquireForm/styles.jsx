@@ -11,7 +11,7 @@ export const CustomContainer = styled.div`
 
 export const CustomButton = styled.button`
     font-size: ${SCREEN.fontSize(18)};
-    border-radius: 0.278vw;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;

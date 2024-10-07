@@ -303,7 +303,7 @@ export const assets = {
             },
             "tenancy-vectors": {
                 "l09": {
-                    src: imageCDN("availability/leasing", "", "svg"),
+                    src: imageCDN("availability/leasing", "9", "svg"),
                     alt: "",
                 },
                 "l14": {

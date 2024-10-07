@@ -41,9 +41,9 @@ export const ImgWrapper = styled.div`
     min-width: ${SCREEN.width(470)};
     height: ${SCREEN.height(666)};
     min-height: ${SCREEN.height(666)};
-    border-radius: 0.278vw;
+    border-radius: 15px;
     img {
-        border-radius: 0.278vw;
+        border-radius: 15px;
     }
 
     ${MEDIA.md`
@@ -72,7 +72,7 @@ export const CustomButton = styled.button`
 
     font-size: ${SCREEN.fontSize(18)};
     font-family: 'SuisseIntl-Regular', serif;
-    border-radius: 0.278vw;
+    border-radius: 15px;
     color: #164A49;
     margin: 0;
     display: flex;
