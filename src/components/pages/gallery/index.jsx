@@ -1,14 +1,13 @@
 import React from 'react';
-import { galleryConst as CONST } from "./constants";
 import { SlideCarousel } from "../../molecules";
 import { Page } from "../../templates";
-
+import { assets } from '../../../assets/assetKeys'
 
 function Gallery() {
     return (
-        <Page >
+        <Page $fullscreen>
             <SlideCarousel
-                images={CONST.carousel}
+                images={assets.gallery.img.carousel}
             />
         </Page >
     );

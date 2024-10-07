@@ -56,7 +56,6 @@ function App() {
                     <ScrollingText />
                     <History pageRef={pageRefs.history} />
                     <Gallery />
-                    <Hero $bgSecondary src={CONST.heroThree} />
                     <Agency pageRef={pageRefs.agency} />
                     <Hero $bgSecondary src={CONST.heroThree} />
                     <Enquire pageRef={pageRefs.enquire} scrollToTop={() => scrollTo(pageRefs.landing)} />

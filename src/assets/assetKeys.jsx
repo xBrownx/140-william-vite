@@ -373,9 +373,37 @@ export const assets = {
         img: {
             carousel: [
                 {
-                    src: imageCDN("gallery", "gallery"),
+                    src: imageCDN("gallery", "Gallery-Carousel-02", "jpg"),
                     alt: "",
-                }
+                },
+                {
+                    src: imageCDN("gallery", "Gallery-Carousel-01", "jpg"),
+                    alt: "",
+                },
+                {
+                    src: imageCDN("gallery", "Gallery-Carousel-03", "jpg"),
+                    alt: "",
+                },
+                {
+                    src: imageCDN("gallery", "Gallery-Carousel-04", "jpg"),
+                    alt: "",
+                },
+                {
+                    src: imageCDN("gallery", "Gallery-Carousel-05", "jpg"),
+                    alt: "",
+                },
+                {
+                    src: imageCDN("gallery", "Gallery-Carousel-06", "jpg"),
+                    alt: "",
+                },
+                {
+                    src: imageCDN("gallery", "Gallery-Carousel-07", "jpg"),
+                    alt: "",
+                },
+                {
+                    src: imageCDN("gallery", "Gallery-Carousel-08", "jpg"),
+                    alt: "",
+                },
             ]
         }
     },
