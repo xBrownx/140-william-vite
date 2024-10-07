@@ -42,7 +42,7 @@ export const VideoContainer = styled.div`
     ${props => props.$isLoading && css`
         opacity: 0;
     `};
-    
+
 `
 
 
@@ -67,6 +67,11 @@ export const MenuWrapper = styled.div`
     box-sizing: border-box;
     position: absolute;
     bottom: 5vh;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 `
 
 export const StyledUl = styled.ul`
@@ -95,11 +100,14 @@ export const StyledLi = styled.li`
     justify-content: center;
     height: ${SCREEN.height(29)};
     padding-inline: ${SCREEN.width(8)};
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 
     ${props => props.$border && css`
         border-right: 1px solid white;
     `}
-    
     p {
         transition: all 200ms ease-in-out;
         color: white;
@@ -118,6 +126,7 @@ export const StyledLi = styled.li`
             opacity: 1;
         }
     }
+
     ${props => props.$active && css`
         p {
             opacity: 1;
@@ -144,7 +153,7 @@ export const CustomRow = styled.div`
     align-items: center;
     justify-content: space-between;
     padding-inline: 16px;
-box-sizing: border-box;
+    box-sizing: border-box;
 `
 
 export const CustomHeading = styled.h2`
@@ -167,16 +176,16 @@ export const ArrowWrapper = styled.div`
     img {
         width: 100%;
         height: 100%;
-        
+
         ${props => props.$hidden && css`
             display: none;
         `}
     }
-    
+
     ${props => props.$right && css`
         rotate: 90deg;
     `}
-    
+
     ${props => props.$left && css`
         rotate: -90deg;
     `}

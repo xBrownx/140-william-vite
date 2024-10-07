@@ -1,5 +1,5 @@
-import { CustomLink, StyledUl } from "./styled";
-import { Button, Link } from "../../atoms";
+import { CustomLink, StyledUl } from "./styled.jsx";
+import { Button, Link } from "../../../atoms/index.jsx";
 import React from "react";
 
 

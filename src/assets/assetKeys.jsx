@@ -396,7 +396,7 @@ export const assets = {
         },
         vid: {
             "hero-video": {
-                src: videoCDN("history/history", "history-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/history/history/history-output.m3u8",
             }
         }
     },

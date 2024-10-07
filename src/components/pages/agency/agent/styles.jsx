@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screen as SCREEN, media as MEDIA } from "../../../utils";
+import { screen as SCREEN, media as MEDIA } from "../../../../utils/index.jsx";
 
 export const Wrapper = styled.div`
     padding: 0;

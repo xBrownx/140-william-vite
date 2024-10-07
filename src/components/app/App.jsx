@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import './App.css'
+import './App.css';
+import './index.css';
 import Landing from "../pages/landing";
 import Home from "../pages/Home";
 import Lifestyle from "../pages/lifestyle";

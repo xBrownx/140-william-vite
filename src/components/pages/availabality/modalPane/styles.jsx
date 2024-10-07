@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { screen as STYLE } from '../../../utils'
+import { screen as STYLE } from '../../../../utils/index.jsx'
 
 
 export const BackgroundOverlay = styled.div`
@@ -32,8 +32,7 @@ export const ModalWindow = styled.div`
     overflow: hidden;
     box-sizing: border-box;
     pointer-events: none;
-    transition: all 500ms ease-in-out;
-    
+    transition: opacity 10s ease-in-out 10s;
     
     background: rgba(22, 74, 73, 0.3);
     backdrop-filter: blur(10px);
@@ -41,11 +40,13 @@ export const ModalWindow = styled.div`
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 
     opacity: 0;
-    
     ${props => props.$open && css`
+        
         opacity: 1;
         pointer-events: visible;
     `};
+    
+    
 `
 
 export const CloseButtonWrapper = styled.div`

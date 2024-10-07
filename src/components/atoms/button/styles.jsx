@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { screen as STYLE, media as MEDIA } from '../../../utils';
 
 
@@ -12,7 +12,7 @@ export const StyledButton = styled.button`
     justify-content: center;
     align-items: center;
     color: #164A49;
-    
+
     background: transparent;
     border-width: 1px;
     border-style: solid;
@@ -36,12 +36,12 @@ export const StyledButton = styled.button`
     ${props => props.$fontSize && css`
         font-size: ${STYLE.fontSize(props.$fontSize)};
     `};
-    
+
     ${props => props.$secondary && css`
         color: white;
         border-color: white;
     `};
-    
+
     ${props => props.$variantOne && css`
         color: black;
         border-color: white;
@@ -52,16 +52,16 @@ export const StyledButton = styled.button`
     ${props => props.$gap && css`
         gap: ${STYLE.width(props.gap)};
     `};
-    
+
     ${props => props.$fillParent && css`
         width: 100%;
     `};
-    
+
     ${props => props.$square && css`
         width: 150px;
         height: 150px;
     `};
-    
+
     &:hover {
         cursor: pointer;
         color: #FFF;
@@ -90,10 +90,10 @@ export const StyledButton = styled.button`
     }
 
     ${props => props.$variant && css`
-        &::after,  &:hover::after {
+        &::after, &:hover::after {
             all: unset;
         }
-        
+
         &:hover {
             cursor: pointer;
             color: black;
@@ -104,10 +104,15 @@ export const StyledButton = styled.button`
         width: 100%;
         height: ${STYLE.height(51)};
         color: #162425;
-        
+
         background: white;
 
     `}
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 
 `
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screen as STYLE, media as MEDIA } from '../../../utils'
+import { screen as STYLE, media as MEDIA } from '../../../../utils/index.jsx'
 
 export const StyledUl = styled.ul`
     position: relative;

@@ -1,5 +1,5 @@
-import { CustomImageContainer, Name, Phone, StyledImg, Wrapper } from "./styles";
-import { Column } from "../../atoms";
+import { CustomImageContainer, Name, Phone, StyledImg, Wrapper } from "./styles.jsx";
+import { Column } from "../../../atoms/index.jsx";
 import React from "react";
 
 

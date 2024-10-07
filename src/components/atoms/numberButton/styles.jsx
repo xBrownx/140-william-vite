@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { screen as STYLE, media as MEDIA } from '../../../utils';
 import { SCREEN } from "../../../utils/screen.jsx";
 
@@ -23,12 +23,17 @@ export const Container = styled.div`
     ${props => props.$isHover && props.$active && css`
         cursor: pointer;
     `};
-    
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
 `
 export const Wrapper = styled.div`
     box-sizing: border-box;
     transition: all 200ms ease;
-    
+
     ${squareTwo(30)};
     font-size: ${STYLE.fontSize(14)};
     font-family: 'SuisseIntl-Light', serif;
@@ -36,21 +41,20 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    background: rgba(0,0,0,0.15);
+
+    background: rgba(0, 0, 0, 0.15);
     padding-top: ${STYLE.height(5)} 0 0 0;
     border-radius: 5px;
-    
-    
+
+
     ${props => props.$active && css`
         font-weight: 700;
         background: #164A49;
     `}
-    
     span {
         padding-top: 100%;
     }
-    
-    
-    
+
+
+
 `

@@ -26,12 +26,12 @@ export const Pane = styled.div`
         flex: none;
         
         ${props => props.id === 'left-pane' && css`
-            order: 2;
-        `};
+        order: 2;
+    `};
         
         ${props => props.id === 'right-pane' && css`
-            order: 1;
-        `};
+        order: 1;
+    `};
     `};
 `
 
@@ -42,6 +42,7 @@ export const ImgWrapper = styled.div`
     height: ${SCREEN.height(666)};
     min-height: ${SCREEN.height(666)};
     border-radius: 15px;
+
     img {
         border-radius: 15px;
     }
@@ -78,8 +79,11 @@ export const CustomButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
     background: transparent;
     border-width: 1px;
     border-style: solid;
@@ -98,12 +102,13 @@ export const CustomButton = styled.button`
         padding-block: 8px;
         font-weight: 400;
     `};
-    
-    
+
+
     &:hover {
         cursor: pointer;
         color: #FFF;
-    };
+    }
+;
 
     &::after {
         content: "";
@@ -117,7 +122,8 @@ export const CustomButton = styled.button`
         right: 0;
         top: -100%;
         bottom: 100%;
-    };
+    }
+;
 
     &:hover::after {
         left: 0;
@@ -125,7 +131,8 @@ export const CustomButton = styled.button`
         top: 0;
         bottom: 0;
         transition: all 0.35s;
-    };
+    }
+;
 `
 
 export const CustomSubheading = styled.h2`
@@ -134,7 +141,7 @@ export const CustomSubheading = styled.h2`
     font-size: ${SCREEN.fontSize(16)};
     padding: 0;
     margin: 0;
-    
+
     font-weight: 400;
 
     ${MEDIA.md`
@@ -149,7 +156,7 @@ export const CustomParagraph = styled.p`
     font-family: 'SuisseIntl-Regular', serif;
     font-size: ${SCREEN.fontSize(36)};
     font-weight: 300;
-    color: #164A49; 
+    color: #164A49;
     opacity: 0.7;
 
     ${MEDIA.md`
@@ -158,6 +165,6 @@ export const CustomParagraph = styled.p`
         white-space: wrap;
         padding: 0;
     `};
-    
-    
+
+
 `

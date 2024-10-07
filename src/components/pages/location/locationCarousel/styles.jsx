@@ -3,7 +3,7 @@ import { screen as SCREEN, media as MEDIA } from '../../../../utils/index.jsx';
 
 export const Wrapper = styled.div`
     box-sizing: border-box;
-    
+
     ${MEDIA.md`
         width: 100%;
     `};
@@ -17,6 +17,11 @@ export const CustomContainer = styled.div`
         width: 100vw;
         min-width: 100vw;
     `};
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 `
 
 export const SwipeContainer = styled.div`
@@ -40,6 +45,11 @@ export const MenuContainer = styled.div`
     justify-content: center;
     overflow: hidden;
     box-sizing: border-box;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 `
 
 export const MenuWrapper = styled.div`
@@ -51,6 +61,11 @@ export const MenuWrapper = styled.div`
     @media only screen and (max-width: 750px) {
         gap: 5px;
     }
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 `
 
 export const MenuItem = styled.div`
@@ -58,6 +73,10 @@ export const MenuItem = styled.div`
     flex-direction: row;
     gap: 0.278vw;
     align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 
     p {
         font-family: 'Archivo', sans-serif;

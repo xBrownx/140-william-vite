@@ -1,8 +1,8 @@
 import React from "react";
-import { Image } from '../../atoms'
-import { BackgroundOverlay, CloseButtonWrapper, ModalWindow } from "./styles";
+import { Image } from '../../../atoms/index.jsx'
+import { BackgroundOverlay, CloseButtonWrapper, ModalWindow } from "./styles.jsx";
 
-import { useModalStatusContext } from "../../pages/availabality/availabilityOverlay/context";
+import { useModalStatusContext } from "../availabilityOverlay/context.jsx";
 
 function ModalPane(props) {
     const [isModalOpen, onLevelClick] = useModalStatusContext();

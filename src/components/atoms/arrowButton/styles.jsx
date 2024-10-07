@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { screen as SCREEN, media as MEDIA } from "../../../utils";
 
 
@@ -15,17 +15,22 @@ export const StyledButton = styled.button`
     z-index: 1;
     width: 100%;
     border: unset;
-    
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
     ${props => props.$secondary && css`
         color: white;
         border-color: white;
     `};
-    
+
     &:hover {
         cursor: pointer;
         color: #FFF;
     }
-    
+
     &::after {
         content: "";
         background: #164A49;
@@ -46,17 +51,17 @@ export const StyledButton = styled.button`
         bottom: 0;
         transition: all 0.35s;
     }
-    
+
     img {
         width: 100%;
         height: 100%;
-       
+
     }
-    
-     ${props => props.$rotate && css`
-         transform: rotate(180deg);
-     `}
-    
+
+    ${props => props.$rotate && css`
+        transform: rotate(180deg);
+    `}
+
 `
 
 export const Wrapper = styled.div`
@@ -79,6 +84,11 @@ export const Wrapper = styled.div`
         border-radius: 3px;
         padding-bottom: 0;
     `};
-    
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
 `
 

@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import { screen as SCREEN, media as MEDIA } from '../../../../utils/index.jsx'
 
 export const Wrapper = styled.div`
@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     flex-direction: row;
     width: max-content;
     gap: 40px;
-    height: ${SCREEN.height(300)};
+    height: ${SCREEN.height(350)};
     max-width: unset !important;
     ${MEDIA.md`
         height: 120px;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 
 
 export const ImgContainer = styled.div`
-    height: 90%;
+    height: 70%;
     padding: 0;
     margin: 0;
     width: auto;

@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { screen as STYLE } from '../../../utils'
+import { screen as STYLE } from '../../../../utils/index.jsx'
 export const Container = styled.div`
     width: fit-content;
     height: ${STYLE.height(432)};
