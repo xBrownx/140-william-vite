@@ -69,8 +69,8 @@ export const MobileMenuContainer = styled.div`
     transition: all 200ms ease-out;
     background: #162425;
     width: 100%;
-    
-    z-index: 10;
+    top: 0;
+    z-index: 1000000;
     position: fixed;
     display: flex;
     flex-direction: column;

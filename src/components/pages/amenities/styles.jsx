@@ -10,7 +10,6 @@ export const CustomSplitScreen = styled.div`
     padding-block: ${SCREEN.height(72)};
     
     ${MEDIA.md`
-
         flex-direction: column;
         padding-top: 64px;
         padding-inline: 16px;

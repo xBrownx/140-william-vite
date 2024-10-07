@@ -3,8 +3,8 @@ import BackgroundContainer from "./backgroundContainer";
 import BackgroundVideo from "./backgroundVideo";
 import FadeCarousel from "./fadeCarousel/index.jsx";
 import { IconLink } from "./iconLink/index.jsx";
-import { LevelButtons } from './levelButtons'
-import { LevelVectors} from "./levelVectors";
+import { LevelButtons } from '../pages/availabality/levelButtons'
+import { LevelVectors} from "../pages/availabality/levelVectors";
 import ModalNav from "./modalNav";
 import ModalPane from "./modalPane";
 import NavList from "./navList";

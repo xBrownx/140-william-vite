@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Column, Container, Input, Row, TextArea } from "../../../atoms/index.jsx";
+import { CustomButton, CustomContainer } from "./styles.jsx";
 
 function EnquireForm(props) {
     const fields = props.fields
@@ -16,7 +17,7 @@ function EnquireForm(props) {
     }
 
     return (
-        <Container $width={576} >
+        <CustomContainer>
             <form onSubmit={handleSubmit} >
                 <Column $gap={16} >
                     <Row
@@ -62,16 +63,16 @@ function EnquireForm(props) {
                             rows="4"
                         />
                     </Row >
-                    <Button
+                    <CustomButton
                         $fillParent
                         $variantOne
                         type="submit"
                     >
                         Submit
-                    </Button >
+                    </CustomButton >
                 </Column >
             </form >
-        </Container >
+        </CustomContainer >
     );
 }
 

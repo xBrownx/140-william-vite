@@ -21,6 +21,7 @@ function SlideCarousel({images, rounded}) {
                         "--swiper-pagination-color": "#FFF",
                         "--swiper-navigation-color": "#FFF",
                         height: "100%",
+                        width: "100%",
                     }}
                 >
                     {images.map((image, i) => {

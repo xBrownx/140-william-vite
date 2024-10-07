@@ -13,7 +13,7 @@ function Amenities({pageRef}) {
                 <Pane >
                     <Container >
                         <Column >
-                            <PageTitle $secondary >
+                            <PageTitle $secondary $noPadding>
                                 {CONST.subheadingTxt}
                                 {CONST.headingTxt}
                             </PageTitle >
@@ -23,7 +23,7 @@ function Amenities({pageRef}) {
                 </Pane >
                 <Pane >
                     <VideoContainer >
-                        <AmenitiesVideo src={CONST.assets.video.src} />
+                        <AmenitiesVideo />
                     </VideoContainer >
                 </Pane >
             </CustomSplitScreen >

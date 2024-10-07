@@ -1,31 +1,18 @@
 import styled from "styled-components";
-import { screen as STYLE, media as MEDIAST } from "../../../utils";
+import { screen as SCREEN, media as MEDIA } from "../../../utils";
 
 export const Wrapper = styled.div`
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
-    gap: ${STYLE.width(8)};
+    gap: ${SCREEN.width(8)};
+
+    ${MEDIA.md`
+        gap: 8px;
+    `};
 `
 
-export const TxtWrapper = styled.div`
-
-`
-
-const AgentDetails = styled.div`
-    
-    p {
-        font-size: ${STYLE.fontSize(14)};
-        margin: 0;
-        padding: ${STYLE.height(14)} 0 0 0;
-        color: white;
-        opacity: 0.7;
-        line-height: ${STYLE.height(14)};
-        font-weight: 400;
-        font-family: 'SuisseIntl-Light', serif;
-    }
-`
 
 export const Name = styled.h1`
     padding: 0;
@@ -33,21 +20,47 @@ export const Name = styled.h1`
     font-family: 'TWKEverett-Regular', serif;
     color: white;
     font-weight: 400;
+
+    ${MEDIA.md`
+            font-size: 14px;
+            line-height: 18.16px;
+            font-weight: 700;
+        `};
 `
 
 export const Phone = styled.p`
     margin: 0;
-    padding-top: ${STYLE.height(8)};
-    font-size: ${STYLE.fontSize(14)};
+    padding-top: ${SCREEN.height(8)};
+    font-size: ${SCREEN.fontSize(14)};
     font-family: 'SuisseIntl-Light', serif;
     font-weight: 400;
     color: white;
     opacity: 0.7;
+
+    ${MEDIA.md`
+            font-size: 12px;
+            line-height: 15.56px;
+            font-weight: 400;
+        `};
 `
 
-export const Email = styled.p``
+export const CustomImageContainer = styled.div`
+    width: ${SCREEN.width(80)};
+    height: ${SCREEN.width(80)};
+    
+    ${MEDIA.md`
+        width: 64px !important;
+        max-width: 64px;
+        min-width: 64px;
+        
+        height: 64px !important;
+        max-height: 64px;
+        min-height: 64px;
+    `};
+`
 
 export const StyledImg = styled.img`
-    width: ${STYLE.width(80)};
-    height: ${STYLE.width(80)};
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `

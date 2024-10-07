@@ -13,6 +13,7 @@ import {
 } from "./styles";
 import { useMobile } from "../../../hooks/index.jsx";
 import logo from '../../../assets/Header-Logo.svg';
+
 function Header(props) {
     const pageRefs = props.pageRefs;
     const links = header.links.map((link) => {
@@ -21,9 +22,15 @@ function Header(props) {
     const isMobile = useMobile();
     const [isShowMenu, setIsShowMenu] = useState(false);
 
+    const onMenuClick = () => {
+        console.log("SHOWING MENU");
+        setIsShowMenu(true);
+    }
+
     const scrollTo = (page) => {
         props.scrollTo(page)
         setIsShowMenu(false);
+
     }
     return (
         <>
@@ -45,13 +52,13 @@ function Header(props) {
                         <img
                             src={"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/icon-menu.svg"}
                             alt={""}
-                            onClick={() => setIsShowMenu(true)}
+                            onClick={onMenuClick}
                         />
                     </IconWrapper >
                 </Wrapper >
             </Container >
             {isMobile &&
-                <MobileMenuContainer $visible={isShowMenu} >
+                <MobileMenuContainer $visible={isShowMenu} id={"mobile-menu"}>
                     <CustomColumn
                         $paddingTop={16}
                         $gap={32}
@@ -99,7 +106,8 @@ function Header(props) {
                         </MobileUl >
                     </CustomColumn >
                 </MobileMenuContainer >
-            }</>
+            }
+        </>
     );
 }
 

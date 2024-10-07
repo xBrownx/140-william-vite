@@ -27,6 +27,11 @@ export const StyledContainer = styled.div`
         height: ${STYLE.height(props.$height)};
     `};
 
+    ${props => props.$heightPercent && css`
+        height: ${props.$heightPercent}%;
+    `};
+
+
     ${props => props.$centre && css`
         display: flex;
         align-items: center;

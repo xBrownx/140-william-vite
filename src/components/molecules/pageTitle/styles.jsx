@@ -56,6 +56,9 @@ export const Container = styled.div`
            width: 100%;
            gap: 16px;
            padding-inline: 16px;
+           ${props => props.$noPadding && css`
+                padding: 0;
+            `};
     `};
 `
 

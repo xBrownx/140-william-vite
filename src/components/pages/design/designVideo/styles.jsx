@@ -4,7 +4,7 @@ import { screen as SCREEN, media as MEDIA } from '../../../../utils/index.jsx'
 
 export const Container = styled.div`
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     background-color: black;
     position: relative;
@@ -33,7 +33,7 @@ export const VideoContainer = styled.div`
     transition: all 200ms;
     opacity: 1;
     width: 100vw;
-    height: fit-content;
+    height: 100vh;
     top: 0;
     left: 0;
     position: relative !important;

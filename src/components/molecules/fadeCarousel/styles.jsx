@@ -8,12 +8,15 @@ export const CarouselContainer = styled.div`
     display: grid;
     place-items: center;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     box-sizing: border-box;
+    background-color: white;
     ${MEDIA.md`
         height: 100%;
         min-width: fit-content;
+        width: 100%;
         overflow: auto;
+            background-color: unset;
     `};
 `
 
@@ -45,11 +48,10 @@ export const ImgContainer = styled.div`
     border-radius: 0.278vw;
     align-items: end;
     box-sizing: border-box;
+    height: 100%;
     ${MEDIA.md`
-        height: 100%;
-        
+
         min-width: 100vw;
-        overflow: scroll;
     `};
 `
 
@@ -59,11 +61,9 @@ export const CustomImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    
     ${MEDIA.md`
         min-height: 100%;
-        width: auto;
-        overflow: auto;
         object-fit: contain !important;
     `};
     

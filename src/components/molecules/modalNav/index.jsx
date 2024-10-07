@@ -1,6 +1,6 @@
 import { Button, Container } from "./styles";
 import { Column, NavArrow } from "../../atoms";
-import { useModalKeyContext } from "../../organisms/availabilityOverlay/context";
+import { useModalKeyContext } from "../../pages/availabality/availabilityOverlay/context";
 import React from "react";
 
 function ModalNav(props) {

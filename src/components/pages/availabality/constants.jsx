@@ -4,7 +4,7 @@ export const availability = {
     subheadingTxt: "AVAILABILITY",
     headingTxt: "Your future workplace",
     headingTxtMobile: "Your future\nworkplace",
-    paragraphTxt: "Discover a new home for your business at 140 William Street—where\n" +
+    paragraphTxt: "Discover a new home for your business at 140 William Street, where\n" +
         "connection and community thrive for today's and tomorrow's workforce.",
     thirdSpaceSubheadingTxt: "LEVEL 5",
     thirdSpaceHeadingTxt: "Third Space",

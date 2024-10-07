@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media as MEDIA } from "../../../utils/index.jsx";
 
 export const Container = styled.div`
     position: relative;
@@ -10,6 +11,12 @@ export const Container = styled.div`
     overflow: hidden;
     height: 0;
     padding-top: 143.88%;
+    
+    ${MEDIA.md`
+        width: 100%;
+        padding-top: 225.45%;
+    `};
+    
 `
 
 export const InnerContainer = styled.div`

@@ -3,14 +3,17 @@ import { constants as CONST } from './constants.jsx';
 import { VideoJS } from "../../../atoms/index.jsx";
 import Arrow from '../../../../assets/Up-Arrow.svg'
 import { ArrowWrapper, Container, CustomHeading, CustomRow, MobileOverlay } from "./styles.jsx";
+import { assets } from "../../../../assets/assetKeys.jsx";
 
-function MobileDesignVideo(props) {
-    const menuItems = CONST.menuItems;
+function MobileDesignVideo() {
+    const videos = assets.design.vid;
+    const [activeKey, setActiveKey] = useState("tour");
     const [mobileIdx, setMobileIdx] = useState(0);
-
+    const menuItems = CONST.menuItems;
     const tour = {...CONST.tour, title: "TOUR"};
+
     let menuArray = Object.keys(menuItems).map(key => {
-        return menuItems[key];
+        return {key: key, ...menuItems[key]};
     });
 
     menuArray = [tour, ...menuArray];
@@ -34,7 +37,7 @@ function MobileDesignVideo(props) {
     return (
         <Container >
             <VideoJS
-                src={menuArray[mobileIdx].videoSrc}
+                src={videos[menuArray[mobileIdx].key].src}
                 autoplay={true}
                 muted={true}
             />

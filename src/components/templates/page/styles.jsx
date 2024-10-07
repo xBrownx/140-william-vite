@@ -69,6 +69,9 @@ export const StyledPage = styled.section`
     
     ${props => props.$paddingBlock && css`
         padding-block: ${SCREEN.height(props.$paddingBlock)};
+        ${MEDIA.md`
+            padding-block: ${props.$paddingBlock}px;
+        `};
     `};
     
     ${props => props.$paddingTop && css`
@@ -95,7 +98,7 @@ export const StyledPage = styled.section`
     ${MEDIA.md`
         width: 100%;
         min-height: fit-content;
-        height: fit-content;
+        height: 100%;
         x-overflow: scroll;
     `};
     

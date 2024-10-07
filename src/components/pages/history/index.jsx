@@ -3,13 +3,15 @@ import { historyConst as CONST } from './constants'
 import { PageTitle } from "../../molecules";
 import { HistoryVideo } from "../../organisms";
 import { Page } from "../../templates";
+import { useMobile } from "../../../hooks/index.jsx";
 
 
 function History({pageRef}) {
+    const isMobile = useMobile();
     return (
         <Page
             $pageRef={pageRef}
-            $paddingBlock={90}
+            $paddingBlock={isMobile ? 64 : 90}
         >
             <PageTitle
                 $row

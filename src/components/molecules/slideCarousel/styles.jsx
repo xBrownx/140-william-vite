@@ -24,6 +24,7 @@ export const Slide = styled(SwiperSlide)`
     box-sizing: border-box;
     object-fit: scale-down;
     max-width: 100%;
+    width: 100%;
 
 `
 
@@ -34,6 +35,6 @@ export const SwiperImage = styled.img`
     height: 100%;
     
     ${props => props.$rounded && css`
-        border-radius: 15px !important;
+        border-radius: 6px;
     `}
 `

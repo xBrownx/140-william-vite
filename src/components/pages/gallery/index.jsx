@@ -2,13 +2,16 @@ import React from 'react';
 import { SlideCarousel } from "../../molecules";
 import { Page } from "../../templates";
 import { assets } from '../../../assets/assetKeys'
+import { CarouselContainer } from "./styles.jsx";
 
 function Gallery() {
     return (
-        <Page $fullscreen>
-            <SlideCarousel
-                images={assets.gallery.img.carousel}
-            />
+        <Page $fullscreen >
+            <CarouselContainer >
+                <SlideCarousel
+                    images={assets.gallery.img.carousel}
+                />
+            </CarouselContainer >
         </Page >
     );
 }

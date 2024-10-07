@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { screen as STYLE, media as MEDIA } from '../../../utils';
+import { screen as SCREEN, media as MEDIA } from '../../../utils';
 
 export const StyledTextArea = styled.textarea`
-    height: ${STYLE.height(109)};
-    font-size: ${STYLE.fontSize(18)};
+    height: ${SCREEN.height(109)};
+    font-size: ${SCREEN.fontSize(18)};
     font-family: 'SuisseIntl-Light', serif;
     width: 100%;
     background-color: transparent;
@@ -17,5 +17,12 @@ export const StyledTextArea = styled.textarea`
     &::placeholder {
         color: white;
     }
+
+    opacity: 0.7;
+    ${MEDIA.md`
+        height: 109px;
+        font-size: 14px;
+        line-height: 18.86px;
+    `};
     
 `

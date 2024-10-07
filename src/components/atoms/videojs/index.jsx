@@ -1,6 +1,7 @@
 import React from 'react';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
+import { VideoContainer, VideoWrapper } from "./styles.jsx";
 
 export const VideoJS = (props) => {
     const videoRef = React.useRef(null);
@@ -12,8 +13,9 @@ export const VideoJS = (props) => {
         controls: controls,
         loop: loop,
         muted: muted,
-        fluid: true,
-        height: 1080,
+        fluid: false,
+        responsive: true,
+        height: "100%",
         preload: "auto",
         enableSmoothSeeking: true,
         poster: poster,
@@ -75,11 +77,11 @@ export const VideoJS = (props) => {
 
 
     return (
-        <div data-vjs-player style={{ height: "100%", width: "100%", objectFit: "fill" }} >
-            <div ref={videoRef} style={{objectFit: "fill"}}>
+        <VideoContainer data-vjs-player >
+            <VideoWrapper ref={videoRef} >
                 {props.children}
-            </div>
-        </div>
+            </VideoWrapper>
+        </VideoContainer>
     );
 }
 

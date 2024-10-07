@@ -7,21 +7,29 @@ export const ThirdSpaceContainer = styled.div`
 `
 
 export const CarouselWrapper = styled.div`
-     padding-inline: ${SCREEN.width(64)};
+    padding-inline: ${SCREEN.width(64)};
     position: relative;
-    width: ${SCREEN.width(1312)};
-        height: ${SCREEN.height(737)};
+    width: 100%;
+    height: ${SCREEN.height(737)};
     img {
         object-fit: cover;
         object-position: center center;
-        
     }
+    
+    ${MEDIA.md`
+        height: 220px;
+        padding-inline: 16px;
+    `};
 `
 
 export const ContentsContainer = styled.div`
     border-left: 1px solid #162425;
     padding-left: ${SCREEN.width(64)};
     margin-top: ${SCREEN.height(28)};
+    
+    ${MEDIA.md`
+        margin-top: 0;
+    `};
 `
 
 export const Wrapper = styled.div`
@@ -38,6 +46,13 @@ export const Wrapper = styled.div`
         padding-top: ${SCREEN.height(props.$paddingTop)};
         ${MEDIA.md`
             padding-top: ${props.$paddingTop}px;
+        `}
+    `};
+
+    ${props => props.$paddingInline && css`
+        padding-inline: ${SCREEN.width(props.$paddingInline)};
+        ${MEDIA.md`
+            padding-inline: ${props.$paddingInline}px;
         `}
     `};
     

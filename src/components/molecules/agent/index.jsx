@@ -1,5 +1,5 @@
-import {Email, Name, Phone, StyledImg, Wrapper} from "./styles";
-import {Column, Image} from "../../atoms";
+import { CustomImageContainer, Name, Phone, StyledImg, Wrapper } from "./styles";
+import { Column } from "../../atoms";
 import React from "react";
 
 
@@ -7,16 +7,18 @@ function Agent(props) {
     const {name, phone, email} = props.agent;
     const img = props.img
     return (
-        <Wrapper>
-            <StyledImg src={img.src} width={img.width} height={img.height} />
-            <Column padding={{left: 8}}>
-                <Name>{name}</Name>
-                <Phone>
-                    {phone}<br/>
+        <Wrapper >
+            <CustomImageContainer >
+                <StyledImg src={img.src} $width={img.width} $height={img.height} />
+            </CustomImageContainer >
+            <Column $paddingLeft={8} >
+                <Name >{name}</Name >
+                <Phone >
+                    {phone}<br />
                     {email}
-                </Phone>
-            </Column>
-        </Wrapper>
+                </Phone >
+            </Column >
+        </Wrapper >
     );
 }
 

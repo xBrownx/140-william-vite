@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from '../../atoms'
 import { BackgroundOverlay, CloseButtonWrapper, ModalWindow } from "./styles";
 
-import { useModalStatusContext } from "../../organisms/availabilityOverlay/context";
+import { useModalStatusContext } from "../../pages/availabality/availabilityOverlay/context";
 
 function ModalPane(props) {
     const [isModalOpen, onLevelClick] = useModalStatusContext();

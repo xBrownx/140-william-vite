@@ -1,5 +1,6 @@
 export const constants = {
     tour: {
+        key: "tour",
         title: "START TOUR",
     },
     menuItems: {

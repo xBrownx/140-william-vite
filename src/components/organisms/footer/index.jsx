@@ -1,27 +1,36 @@
 
 import React from "react";
-import { CentreDiv, Container, LeftDiv, RightDiv, StyledText, Wrapper } from "./styles";
+import { CentreDiv, Container, CustomImage, LeftDiv, MobileWrapper, RightDiv, StyledText, Wrapper } from "./styles";
 import { Image } from "../../atoms";
 import { assets } from "../../../assets/assetKeys.jsx";
+import { useMobile } from "../../../hooks/index.jsx";
 
 function Footer() {
     const clientLogo = assets.footer.img["client-logo"];
     const replikaLogo = assets.footer.img["replika-logo"];
+    const isMobile = useMobile();
     return (
         <Container >
             <Wrapper >
-                <LeftDiv >
-                    <StyledText >
+                {!isMobile && <LeftDiv>
+                    <StyledText>
                         Privacy Policy
-                    </StyledText >
-                </LeftDiv >
+                    </StyledText>
+                </LeftDiv>}
                 <CentreDiv >
                     <Image src={clientLogo.src} alt={clientLogo.alt}/>
                 </CentreDiv >
-                <RightDiv >
+                {!isMobile && <RightDiv>
                     <Image src={replikaLogo.src} alt={replikaLogo.alt} />
-                </RightDiv >
+                </RightDiv >}
             </Wrapper >
+            {isMobile && <MobileWrapper>
+                <StyledText>
+                    Privacy Policy
+                </StyledText>
+                <CustomImage src={replikaLogo.src} alt={replikaLogo.alt} />
+            </MobileWrapper>
+            }
         </Container >
     );
 }

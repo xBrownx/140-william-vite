@@ -90,21 +90,12 @@ export const HeadingWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-`
-
-
-export const StyledHeading = styled.h1`
     opacity: 0;
     transition: opacity 800ms ease 1s;
     ${props => props.$startTransition && css`
         opacity: 1;
     `};
-
-    text-wrap: nowrap;
-    font-family: 'SuisseIntl-Regular', serif;
-    letter-spacing: 15px;
-    font-size: ${SCREEN.fontSize(85)};
-    color: #DED9D0;
-    line-height: ${SCREEN.height(85)};
 `
+
+
 

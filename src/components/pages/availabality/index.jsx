@@ -5,25 +5,25 @@ import { BackgroundContainer, PageTitle } from "../../molecules";
 import { AvailabilityOverlay, AvailabilityRating, ThirdSpaceCarousel, } from "../../organisms";
 import { Page } from "../../templates";
 import { useMobile } from "../../../hooks/index.jsx";
-import AvailabilityMobile from "../../organisms/availabilityMobile/index.jsx";
+import AvailabilityMobile from "./availabilityMobile/index.jsx";
 import { CarouselWrapper, ContentsContainer, ThirdSpaceContainer, Wrapper } from "./styles.jsx";
-import { Heading, Paragraph, Subheading } from "../../atoms/index.jsx";
+import { Column, Heading, Paragraph, Subheading } from "../../atoms/index.jsx";
 import SlideUpAnim from "../../molecules/slideUpAnim/index.jsx";
 
 
-function Availability({ pageRef, setNavVis }) {
+function Availability({pageRef, setNavVis}) {
     const isMobile = useMobile();
-    const backgroundImage = assets.availability.img["background-image"]
+    const backgroundImage = isMobile ? assets.availability.img["background-image-mobile"] : assets.availability.img["background-image"]
     return (
-        <Page $pageRef={pageRef}>
+        <Page $pageRef={pageRef} >
             {isMobile && <PageContents />}
-            <BackgroundContainer $src={backgroundImage.src}>
+            <BackgroundContainer $src={backgroundImage.src} >
                 {!isMobile && <AvailabilityOverlay />}
                 {!isMobile && <PageContents />}
                 {isMobile && <AvailabilityMobile setNavVis={setNavVis} />}
-            </BackgroundContainer>
+            </BackgroundContainer >
 
-            <ThirdSpaceContainer>
+            <ThirdSpaceContainer >
                 <PageTitle
                     $noPStyle
                     $paddingTop={47}
@@ -32,13 +32,13 @@ function Availability({ pageRef, setNavVis }) {
                 >
                     {CONST.thirdSpaceSubheadingTxt}
                     {CONST.thirdSpaceHeadingTxt}
-                </PageTitle>
-                <CarouselWrapper>
+                </PageTitle >
+                <CarouselWrapper >
                     <ThirdSpaceCarousel />
-                </CarouselWrapper>
-            </ThirdSpaceContainer>
+                </CarouselWrapper >
+            </ThirdSpaceContainer >
 
-        </Page>
+        </Page >
     );
 }
 
@@ -47,32 +47,36 @@ const PageContents = () => {
     return (
         <Wrapper
             $paddingTop={47}
-            $paddingLeft={isMobile ? 0 : 64}
-        >
-            <Subheading $variant>
-                    {CONST.subheadingTxt}
-                </Subheading >
-                <Heading $variant>
-                    {isMobile ? CONST.headingTxtMobile : CONST.headingTxt}
-                </Heading >
-            <ContentsContainer>
-                <SlideUpAnim >
-                <Paragraph $variant >
-                    {CONST.paragraphTxt}
-                </Paragraph >
-            </SlideUpAnim >
-                <AvailabilityRating assets={assets} />
-            </ContentsContainer>
-            {/*<PageTitle*/}
-            {/*    $variant*/}
-            {/*    $paddingTop={47}*/}
-            {/*    $paddingLeft={isMobile ? 0 : 64}>*/}
-            {/*    {CONST.subheadingTxt}*/}
-            {/*    {isMobile ? CONST.headingTxtMobile : CONST.headingTxt}*/}
-            {/*    {CONST.paragraphTxt}*/}
-            {/*</PageTitle>*/}
+            $paddingInline={isMobile ? 16 : 64}
 
-        </Wrapper>
+        >
+            <Column $gap={isMobile ? 16 : 0} $paddingBottom={isMobile ? 48 : 0} >
+                <div>
+                    <Subheading $variant >
+                        {CONST.subheadingTxt}
+                    </Subheading >
+                    <Heading $variant >
+                        {isMobile ? CONST.headingTxtMobile : CONST.headingTxt}
+                    </Heading >
+                </div>
+                <ContentsContainer >
+                    <SlideUpAnim >
+                        <Paragraph $variant >
+                            {CONST.paragraphTxt}
+                        </Paragraph >
+                    </SlideUpAnim >
+                    <AvailabilityRating assets={assets} />
+                </ContentsContainer >
+                {/*<PageTitle*/}
+                {/*    $variant*/}
+                {/*    $paddingTop={47}*/}
+                {/*    $paddingLeft={isMobile ? 0 : 64}>*/}
+                {/*    {CONST.subheadingTxt}*/}
+                {/*    {isMobile ? CONST.headingTxtMobile : CONST.headingTxt}*/}
+                {/*    {CONST.paragraphTxt}*/}
+                {/*</PageTitle>*/}
+            </Column >
+        </Wrapper >
     );
 
 }

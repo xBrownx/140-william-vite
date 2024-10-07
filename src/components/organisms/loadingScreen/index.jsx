@@ -4,12 +4,12 @@ import {
     HeadingWrapper,
     ImageWrapper,
     ProgressBar,
-    StyledHeading,
     StyledP,
     TextWrapper,
     Wrapper
 } from './styles';
 import logo from '../../../assets/large-logo.png';
+import logoText from '../../../assets/logo_text isolated.svg'
 
 function LoadingScreen(props) {
     const [progress, setProgress] = useState(0);
@@ -47,10 +47,8 @@ function LoadingScreen(props) {
                     <ImageWrapper $startTransition={startTransition}>
                         <img src={logo} alt={""} />
                     </ImageWrapper >
-                    <HeadingWrapper >
-                        <StyledHeading $startTransition={startTransition} >
-                            140 WILLIAM ST
-                        </StyledHeading >
+                    <HeadingWrapper $startTransition={startTransition}>
+                        <img src={logoText} alt={""} />
                     </HeadingWrapper >
                 </Wrapper >
                 <Wrapper >

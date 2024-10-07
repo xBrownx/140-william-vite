@@ -17,11 +17,15 @@ export const ArrowContainer = styled.div`
     bottom: 0;
     padding-right: ${SCREEN.width(32)};
     padding-bottom: ${SCREEN.height(41)};
-
+    z-index: 100000;
     ${MEDIA.md`
-        width: 64px;
+        display: flex;
+        width: 100%;
         height: 64px;
         right: unset;
         bottom: 32px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: unset;
     `};
 `

@@ -37,6 +37,7 @@ export const ParallaxText = memo(
         return (
             lineSplit.map((line) => (
                     <Wrapper
+                        key={line}
                         as={motion.div}
                         initial="hidden"
                         whileInView="visible"

@@ -4,8 +4,8 @@ import { Image } from '../../atoms'
 import { Agent } from '../../molecules'
 import { Page, SplitScreen } from "../../templates";
 import {
-    ContentContainer,
-    ImgWrapper,
+    ContentContainer, CustomImage, CustomImageWrapper, CustomSplitScreen,
+    ImgWrapper, Pane,
     RightHandPane,
     StyledHeading,
     StyledParagraph, StyledSubheading,
@@ -13,6 +13,7 @@ import {
     SubheadingWrapper
 } from "./styles.jsx";
 import { assets } from "../../../assets/assetKeys.jsx";
+import { useMobile } from "../../../hooks/index.jsx";
 
 const knightFrankAgency = CONST.agencies.knightFrank;
 const colliersAgency = CONST.agencies.colliers;
@@ -22,67 +23,69 @@ const OpenIcon = CONST.assets.icons.open.src;
 
 function Agency({pageRef}) {
     const heroImg = assets.agency.img["hero"];
+    const isMobile = useMobile();
     return (
         <Page
             $bgSecondary
-            $paddingInline={160}
-            $paddingBlock={190}
+            $paddingInline={isMobile ? 0 : 160}
+            $paddingBlock={isMobile ? 0 : 190}
         >
-            <SplitScreen
-                $pageRef={pageRef}
+            <CustomSplitScreen
+                ref={pageRef}
                 $height={815}
             >
-                <ImgWrapper >
-                    <Image
-                        src={heroImg.src}
-                        width={544}
-                        height={815}
-                    />
-                </ImgWrapper >
-                <RightHandPane >
-                    <StyledHeading >
-                        {CONST.headingTxt}
-                    </StyledHeading >
-                    <ContentContainer >
-                        <StyledParagraph >
-                            {CONST.paragraphTxt}
-                        </StyledParagraph >
+                <Pane id={'left-pane'} >
+                    <CustomImageWrapper {...heroImg}>
+                        <CustomImage
+                            src={heroImg.src}
+                            width={544}
+                            height={815} />
+                    </CustomImageWrapper >
+                </Pane >
+                <Pane id={'right-pane'} >
+                    <RightHandPane >
+                        <StyledHeading >
+                            {CONST.headingTxt}
+                        </StyledHeading >
+                        <ContentContainer >
+                            <StyledParagraph >
+                                {CONST.paragraphTxt}
+                            </StyledParagraph >
 
-                        <SubHeading
-                            title={colliersAgency.label}
-                            link={colliersAgency.link}
-                        />
-                        <StyledUl >
-                            {colliersAgency.agents.map((agent, i) => (
-                                <Agent
-                                    key={agent.key}
-                                    agent={agent}
-                                    img={agentAssets[agent.key]}
-                                />
-                            ))}
-                        </StyledUl >
-                        <SubHeading
-                            title={knightFrankAgency.label}
-                            link={knightFrankAgency.link}
-                        />
-                        <StyledUl >
-                            {knightFrankAgency.agents.map((agent, i) => (
-                                <Agent
-                                    key={agent.key}
-                                    agent={agent}
-                                    img={agentAssets[agent.key]}
-                                />
-                            ))}
-                        </StyledUl >
-                    </ContentContainer >
-                </RightHandPane >
-            </SplitScreen >
+                            <SubHeading
+                                title={colliersAgency.label}
+                                link={colliersAgency.link}
+                            />
+                            <StyledUl >
+                                {colliersAgency.agents.map((agent, i) => (
+                                    <Agent
+                                        key={agent.key}
+                                        agent={agent}
+                                        img={agentAssets[agent.key]}
+                                    />
+                                ))}
+                            </StyledUl >
+                            <SubHeading
+                                title={knightFrankAgency.label}
+                                link={knightFrankAgency.link}
+                            />
+                            <StyledUl >
+                                {knightFrankAgency.agents.map((agent, i) => (
+                                    <Agent
+                                        key={agent.key}
+                                        agent={agent}
+                                        img={agentAssets[agent.key]}
+                                    />
+                                ))}
+                            </StyledUl >
+                        </ContentContainer >
+                    </RightHandPane >
+                </Pane >
+            </CustomSplitScreen >
 
         </Page >
     );
 }
-
-
 
 
 const SubHeading = ({title, link}) => {
@@ -94,11 +97,9 @@ const SubHeading = ({title, link}) => {
     return (
         <SubheadingWrapper onClick={() => openInNewTab(link)} >
             <StyledSubheading >{title}</StyledSubheading >
-            <Image src={OpenIcon} />
         </SubheadingWrapper >
     );
 }
-
 
 
 export default React.memo(Agency);

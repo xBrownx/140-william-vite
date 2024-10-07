@@ -76,22 +76,44 @@ export const assets = {
     },
     location: {
         img: {
-            "fnb": {
-                src: imageCDN("location", "fnb", "svg"),
-                alt: "nearby-food-and-beverage"
+            desktop: {
+                "fnb": {
+                    src: imageCDN("location", "fnb", "svg"),
+
+                    alt: "nearby-food-and-beverage"
+                },
+                "retail": {
+                    src: imageCDN("location", "retail", "svg"),
+                    alt: "nearby-retail"
+                },
+                "trains": {
+                    src: imageCDN("location", "trains", "svg"),
+                    alt: "nearby-trains"
+                },
+                "hotels": {
+                    src: imageCDN("location", "hotels", "svg"),
+                    alt: "nearby-hotels"
+                },
             },
-            "retail": {
-                src: imageCDN("location", "retail", "svg"),
-                alt: "nearby-retail"
-            },
-            "trains": {
-                src: imageCDN("location", "trains", "svg"),
-                alt: "nearby-trains"
-            },
-            "hotels": {
-                src: imageCDN("location", "hotels", "svg"),
-                alt: "nearby-hotels"
-            },
+            mobile: {
+                "fnb": {
+                    src: imageCDN("location", "fnb-mobile", "svg"),
+
+                    alt: "nearby-food-and-beverage"
+                },
+                "retail": {
+                    src: imageCDN("location", "retail-mobile", "svg"),
+                    alt: "nearby-retail"
+                },
+                "trains": {
+                    src: imageCDN("location", "station-mobile", "svg"),
+                    alt: "nearby-trains"
+                },
+                "hotels": {
+                    src: imageCDN("location", "hotel-mobile", "svg"),
+                    alt: "nearby-hotels"
+                },
+            }
         },
         icon: {
             "fnb": {
@@ -123,27 +145,32 @@ export const assets = {
                 controls: false,
             },
             "lift-lobby": {
-                src: videoCDN("design/lift-lobby", "lift-lobby"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/lift-lobby/lift-lobby-output.m3u8",
                 controls: false,
             },
             "lounge-lobby": {
-                src: videoCDN("design/lounge-lobby", "lounge-lobby-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/lounge-lobby/lounge-lobby-output.m3u8",
                 controls: false,
             },
             "work-lobby": {
                 src: videoCDN("design/work-lobby", "work-lobby-output"),
+                controls: false,
             },
             "servery": {
-                src: videoCDN("design/servery", "servery-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/servery/servery-output.m3u8",
+                controls: false,
             },
             "cafe-pavilion": {
-                src: videoCDN("design/cafe-pavilion", "cafe-pavilion-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/cafe-pavilion/cafe-pavilion-output.m3u8",
+                controls: false,
             },
             "meeting-room": {
-                src: videoCDN("design/meeting-room", "meeting-room-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/meeting-room/meeting-room-output.m3u8",
+                controls: false,
             },
             "courtyard": {
-                src: videoCDN("design/courtyard", "courtyard-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/courtyard/courtyard-output.m3u8",
+                controls: false,
             },
         },
         img: {
@@ -226,6 +253,10 @@ export const assets = {
         img: {
             "background-image": {
                 src: imageCDN("availability", "availability-background-optimised", "jpg"),
+                alt: "background-image-building-3d-render",
+            },
+            "background-image-mobile": {
+                src: imageCDN("availability", "mobile-background-optimised", "jpg"),
                 alt: "background-image-building-3d-render",
             },
             "shadow-vectors": {
