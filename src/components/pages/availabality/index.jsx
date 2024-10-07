@@ -6,7 +6,9 @@ import { AvailabilityOverlay, AvailabilityRating, ThirdSpaceCarousel, } from "..
 import { Page } from "../../templates";
 import { useMobile } from "../../../hooks/index.jsx";
 import AvailabilityMobile from "../../organisms/availabilityMobile/index.jsx";
-import { CarouselWrapper, ThirdSpaceContainer } from "./styles.jsx";
+import { CarouselWrapper, ContentsContainer, ThirdSpaceContainer, Wrapper } from "./styles.jsx";
+import { Heading, Paragraph, Subheading } from "../../atoms/index.jsx";
+import SlideUpAnim from "../../molecules/slideUpAnim/index.jsx";
 
 
 function Availability({ pageRef, setNavVis }) {
@@ -43,17 +45,34 @@ function Availability({ pageRef, setNavVis }) {
 const PageContents = () => {
     const isMobile = useMobile();
     return (
-        <>
-            <PageTitle
-                $variant
-                $paddingTop={47}
-                $paddingLeft={isMobile ? 0 : 64}>
-                {CONST.subheadingTxt}
-                {isMobile ? CONST.headingTxtMobile : CONST.headingTxt}
-                {CONST.paragraphTxt}
-            </PageTitle>
-            <AvailabilityRating assets={assets} />
-        </>
+        <Wrapper
+            $paddingTop={47}
+            $paddingLeft={isMobile ? 0 : 64}
+        >
+            <Subheading $variant>
+                    {CONST.subheadingTxt}
+                </Subheading >
+                <Heading $variant>
+                    {isMobile ? CONST.headingTxtMobile : CONST.headingTxt}
+                </Heading >
+            <ContentsContainer>
+                <SlideUpAnim >
+                <Paragraph $variant >
+                    {CONST.paragraphTxt}
+                </Paragraph >
+            </SlideUpAnim >
+                <AvailabilityRating assets={assets} />
+            </ContentsContainer>
+            {/*<PageTitle*/}
+            {/*    $variant*/}
+            {/*    $paddingTop={47}*/}
+            {/*    $paddingLeft={isMobile ? 0 : 64}>*/}
+            {/*    {CONST.subheadingTxt}*/}
+            {/*    {isMobile ? CONST.headingTxtMobile : CONST.headingTxt}*/}
+            {/*    {CONST.paragraphTxt}*/}
+            {/*</PageTitle>*/}
+
+        </Wrapper>
     );
 
 }

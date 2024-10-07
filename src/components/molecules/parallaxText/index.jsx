@@ -6,9 +6,9 @@ const DURATION = 0.20;
 const STAGGER = 0.025;
 
 const TextSplit = memo(
-    function TextSplit({children}) {
+    function TextSplit({ children }) {
 
-        return children.split("").map((l, i) => (
+        return (
             <StyledSpan
                 as={motion.span}
                 variants={{
@@ -22,39 +22,39 @@ const TextSplit = memo(
                 transition={{
                     duration: DURATION,
                     ease: "linear",
-                    delay: STAGGER * i,
                 }}
-                key={i}
             >
-                {l === ' ' ? <>&nbsp;</> : l}
+                {children}
+                {/*{l === ' ' ? <>&nbsp;</> : l}*/}
             </StyledSpan>
-        ))
+        )
     }
 );
 
 export const ParallaxText = memo(
-    function ParallaxText({children}) {
+    function ParallaxText({ children }) {
         const lineSplit = children.split("\n");
         return (
-            lineSplit.map((line) =>
-                <Wrapper
-                    as={motion.div}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{
-                        margin: "0px 0px -100px 0px",
-                        amount: "some",
-                        once: true
-                    }}
-                >
-                    <>
-                        <TextSplit>
-                            {line}
-                        </TextSplit>
-                        <br />
-                    </>
+            lineSplit.map((line) => (
+                    <Wrapper
+                        as={motion.div}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{
+                            margin: "0px 0px -100px 0px",
+                            amount: "some",
+                            once: true
+                        }}
+                    >
+                        <>
+                            <TextSplit>
+                                {line}
+                            </TextSplit>
+                            <br />
+                        </>
 
-                </Wrapper>
+                    </Wrapper>
+                )
             )
         );
     }

@@ -82,7 +82,16 @@ export const StyledP = styled.p`
     ${props => props.$startTransition && css`
         opacity: 0;
     `};
+    font-family: 'TWKEverett-Light', serif;
 `
+
+export const HeadingWrapper = styled.div`
+    padding-top: ${SCREEN.height(68.14)};
+    width: 100%;
+    display: flex;
+    justify-content: center;
+`
+
 
 export const StyledHeading = styled.h1`
     opacity: 0;
@@ -91,8 +100,11 @@ export const StyledHeading = styled.h1`
         opacity: 1;
     `};
 
-    font-size: ${SCREEN.fontSize(64)};
+    text-wrap: nowrap;
+    font-family: 'SuisseIntl-Regular', serif;
+    letter-spacing: 15px;
+    font-size: ${SCREEN.fontSize(85)};
     color: #DED9D0;
-    line-height: ${SCREEN.height(84.54)};
+    line-height: ${SCREEN.height(85)};
 `
 

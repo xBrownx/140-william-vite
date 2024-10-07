@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     
     img {
         
-        height: ${STYLE.height(25)};
+        
         justify-content: start;
         align-items: start;
         object-fit: cover;

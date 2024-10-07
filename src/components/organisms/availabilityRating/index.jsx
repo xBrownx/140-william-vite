@@ -10,7 +10,7 @@ export const AvailabilityRating = memo(
         const ratingOne = assets.availability.icon["rating-one"];
         const ratingTwo = assets.availability.icon["rating-one"];
         return (
-            <Column $paddingLeft={isMobile ? 16 : 64}>
+            <Column >
                 <Wrapper>
                     <Image src={ratingOne.src} />
                     <Paragraph $variant>

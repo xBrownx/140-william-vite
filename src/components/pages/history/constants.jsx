@@ -2,7 +2,7 @@ export const historyConst = {
     subheadingTxt: "HISTORY",
     headingTxt: "The Legacy of\n140 William Street",
     paragraphTxt: "Ideally located in the heart of Melbourne CBD,\n" +
-        "enjoying a prime position on the corner of Bourke street\n" +
+        "enjoying a prime position on the corner of Bourke street" +
         "and William Street.",
     assets: {
         video: {

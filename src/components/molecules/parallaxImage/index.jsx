@@ -16,7 +16,7 @@ function ParallaxImg(props) {
     const scale = useTransform(
         scrollYProgress,
         [0, 0.4, 0.6, 1],
-        ["175%", "150%", "125%", "100%"]
+        ["150%", "100%", "100%", "100%"]
     );
 
     return (

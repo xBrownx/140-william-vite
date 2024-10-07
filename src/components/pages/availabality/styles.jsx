@@ -19,6 +19,26 @@ export const CarouselWrapper = styled.div`
 `
 
 export const ContentsContainer = styled.div`
-    border-left: 1px solid #84936E;
-    margin-left: ${SCREEN.width(64)};
+    border-left: 1px solid #162425;
+    padding-left: ${SCREEN.width(64)};
+    margin-top: ${SCREEN.height(28)};
+`
+
+export const Wrapper = styled.div`
+    width: fit-content;
+    box-sizing: border-box;
+    
+    ${props => props.$paddingLeft && css`
+        padding-left: ${SCREEN.width(props.$paddingLeft)};
+        ${MEDIA.md`
+            padding-left: ${props.$paddingLeft}px;
+        `}
+    `};
+    ${props => props.$paddingTop && css`
+        padding-top: ${SCREEN.height(props.$paddingTop)};
+        ${MEDIA.md`
+            padding-top: ${props.$paddingTop}px;
+        `}
+    `};
+    
 `

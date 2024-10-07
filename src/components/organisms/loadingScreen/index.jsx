@@ -1,5 +1,14 @@
 import { memo, useEffect, useRef, useState } from 'react';
-import { Container, ImageWrapper, ProgressBar, StyledHeading, StyledP, TextWrapper, Wrapper } from './styles';
+import {
+    Container,
+    HeadingWrapper,
+    ImageWrapper,
+    ProgressBar,
+    StyledHeading,
+    StyledP,
+    TextWrapper,
+    Wrapper
+} from './styles';
 import logo from '../../../assets/large-logo.png';
 
 function LoadingScreen(props) {
@@ -38,11 +47,11 @@ function LoadingScreen(props) {
                     <ImageWrapper $startTransition={startTransition}>
                         <img src={logo} alt={""} />
                     </ImageWrapper >
-                    <TextWrapper >
+                    <HeadingWrapper >
                         <StyledHeading $startTransition={startTransition} >
                             140 WILLIAM ST
                         </StyledHeading >
-                    </TextWrapper >
+                    </HeadingWrapper >
                 </Wrapper >
                 <Wrapper >
                     <ProgressBar $startTransition={startTransition} id="progress-bar" value={progress} max={100} />

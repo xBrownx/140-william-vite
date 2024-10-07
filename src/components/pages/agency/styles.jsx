@@ -31,7 +31,7 @@ export const StyledParagraph = styled.p`
     font-size: ${STYLE.fontSize(18)};
     font-family: 'SuisseIntl-Light', serif;
     font-weight: 400;
-    line-height: ${STYLE.height(18)};
+    line-height: ${STYLE.height(27)};
     color: #fff;
     opacity: 0.7;
     margin: ${STYLE.height(32)} 0 0 0;
