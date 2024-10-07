@@ -72,7 +72,7 @@ export const CustomButton = styled.button`
 
     font-size: ${SCREEN.fontSize(18)};
     font-family: 'SuisseIntl-Regular', serif;
-    border-radius: 15px;
+    border-radius: 5px;
     color: #164A49;
     margin: 0;
     display: flex;
