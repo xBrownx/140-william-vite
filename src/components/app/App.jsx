@@ -42,10 +42,10 @@ function App() {
     return (
         <>
             {isLoading && <LoadingScreen setLoading={setIsLoading} />}
+            {navBarVisible && <Header pageRefs={pageRefs} scrollTo={scrollTo} />}
             <Landing pageRef={pageRefs.landing} scrollTo={() => scrollTo(pageRefs.home)} isLoading={isLoading} />
             {!isLoading && true &&
                 <>
-                    {navBarVisible && <Header pageRefs={pageRefs} scrollTo={scrollTo} />}
                     <Home pageRef={pageRefs.home} onDiscoverClick={() => scrollTo(pageRefs.availability)} />
                     <Hero src={CONST.heroOne} />
                     <Lifestyle />

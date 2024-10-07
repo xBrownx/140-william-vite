@@ -26,6 +26,7 @@ export const ImageWrapper = styled.div`
     padding-inline: ${SCREEN.width(32)};
     transition: opacity 800ms ease;
     opacity: 0;
+    
     img {
         width: 100%;
         height: 100%;
@@ -35,6 +36,13 @@ export const ImageWrapper = styled.div`
     ${props => props.$startTransition && css`
         opacity: 1;
     `};
+    
+    ${MEDIA.md`
+        width: 100%;
+        padding-inline: 16px;
+        height: 95px;
+        display: flex;
+    `};
 `
 
 export const Wrapper = styled.div`
@@ -43,6 +51,11 @@ export const Wrapper = styled.div`
     width: ${SCREEN.width(523)};
     display: flex;
     flex-direction: column;
+    ${MEDIA.md`
+        width: 100%;
+        padding-inline: 16px;
+        display: flex;
+    `};
 `
 
 export const TextWrapper = styled.div`
@@ -72,6 +85,12 @@ export const ProgressBar = styled.progress`
     ${props => props.$startTransition && css`
         opacity: 0;
     `};
+    
+    ${MEDIA.md`
+        width: 100%;
+        padding-inline: 16px;
+        height: 95px;
+    `};
 `
 
 export const StyledP = styled.p`
@@ -83,6 +102,8 @@ export const StyledP = styled.p`
         opacity: 0;
     `};
     font-family: 'TWKEverett-Light', serif;
+    
+    
 `
 
 export const HeadingWrapper = styled.div`
@@ -94,6 +115,13 @@ export const HeadingWrapper = styled.div`
     transition: opacity 800ms ease 1s;
     ${props => props.$startTransition && css`
         opacity: 1;
+    `};
+    
+    ${MEDIA.md`
+        padding-top: 32px;
+        img {
+        width: 100%;
+        }
     `};
 `
 
