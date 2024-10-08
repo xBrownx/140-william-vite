@@ -1,4 +1,4 @@
-import { imageCDN } from "../../utils/index.jsx";
+import { imageCDN } from "../utils/index.jsx";
 
 export const constants = {
     heroOne: {

@@ -1,21 +1,21 @@
 import { useRef, useState } from "react";
 import './App.css';
 import './index.css';
-import Landing from "../pages/landing";
-import Home from "../pages/Home";
-import Lifestyle from "../pages/lifestyle";
-import Location from "../pages/location";
-import Design from "../pages/design";
-import { Footer, Header, ScrollingText } from "../organisms";
-import { Hero } from "../templates";
-import { constants as CONST } from "./constants";
-import Amenities from "../pages/amenities/index.jsx";
-import History from "../pages/history/index.jsx";
-import Gallery from "../pages/gallery/index.jsx";
-import Agency from "../pages/agency/index.jsx";
-import Enquire from "../pages/enquire/index.jsx";
-import Availability from "../pages/availabality";
-import LoadingScreen from "../organisms/loadingScreen/index.jsx";
+import Landing from "../components/pages/landing/index.jsx";
+import Home from "../components/pages/home/index.jsx";
+import Lifestyle from "../components/pages/lifestyle/index.jsx";
+import Location from "../components/pages/location/index.jsx";
+import Design from "../components/pages/design/index.jsx";
+import { Footer, Header, ScrollingText } from "../components/organisms/index.jsx";
+import { Hero } from "../components/templates/index.jsx";
+import { constants as CONST } from "./constants.jsx";
+import Amenities from "../components/pages/amenities/index.jsx";
+import History from "../components/pages/history/index.jsx";
+import Gallery from "../components/pages/gallery/index.jsx";
+import Agency from "../components/pages/agency/index.jsx";
+import Enquire from "../components/pages/enquire/index.jsx";
+import Availability from "../components/pages/availabality/index.jsx";
+import LoadingScreen from "../components/organisms/loadingScreen/index.jsx";
 
 function App() {
     const [navBarVisible, setNavBarVisible] = useState(true);
