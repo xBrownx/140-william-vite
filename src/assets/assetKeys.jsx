@@ -21,7 +21,7 @@ export const assets = {
     landing: {
         vid: {
             "background-video": {
-                src: videoCDN("landing", "background-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/landing/background-output.m3u8",
                 autoplay: true,
                 controls: false,
                 muted: true,
@@ -133,15 +133,15 @@ export const assets = {
     design: {
         vid: {
             "tour": {
-                src: videoCDN("design/tour", "tour-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/tour/tour-output.m3u8",
                 controls: true,
             },
             "main-entry": {
-                src: videoCDN("design/main-entry", "main-entry-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/main-entry/main-entry-output.m3u8",
                 controls: false,
             },
             "reception": {
-                src: videoCDN("design/reception", "reception-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/reception/reception-output.m3u8",
                 controls: false,
             },
             "lift-lobby": {
@@ -153,7 +153,7 @@ export const assets = {
                 controls: false,
             },
             "work-lobby": {
-                src: videoCDN("design/work-lobby", "work-lobby-output"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/work-lobby/work-lobby-output.m3u8",
                 controls: false,
             },
             "servery": {
@@ -215,7 +215,7 @@ export const assets = {
     amenities: {
         vid: {
             "hero-video": {
-                src: videoCDN("amenities/hero", "hero"),
+                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/amenities/hero/hero-output.m3u8",
             }
         },
         icon: {
